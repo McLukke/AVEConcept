@@ -1,0 +1,413 @@
+<section class="blog-list">
+
+  {.if authorFilter}
+    <p class="filter"><em>Viewing entries by</em><br><strong>{author.displayName}</strong></p>
+  {.end}  
+
+  {.section categoryFilter}
+    <p class="filter"><em>Viewing entries in</em><br><strong>{@|safe}</strong></p>
+  {.end}
+
+  {.section tagFilter}
+    <p class="filter"><em>Viewing entries tagged</em><br><strong>{@|safe}</strong></p>
+  {.end}
+
+  <div class="row">
+    <div id="less-padding" class="col-md-4">
+
+      <div class="row">
+          <div class="col-sm-12 category-dropdown-mobile">
+          <squarespace:block-field id="block-mobile" />
+      </div>
+      </div>
+        <div class="row">
+            <div class="col-md-12 category-list-desktop">
+            <h3 class="filter-category">CATEGORIES</h3>
+            <squarespace:block-field id="blockName" />
+        </div>
+      </div>
+
+    {.repeated section items}
+      {.equal? @index 2} 
+      <div class="row row-padding">
+        <div class="col-md-12">
+          <article class="entry cf {@|item-classes} blogpost-disappear" id="article-{id}" data-item-id="{id}">
+            {.main-image?}
+            <div class="main-image-wrapper">
+              <a href="{fullUrl}"><div class="main-image content-fill top-entry-padding"><img class="response-img" {@|image-meta} /></div></a>
+            </div>
+            {.end}
+
+            <div class="entry-title-wrapper">
+              <div class="entry-content">
+                <h1 data-content-field="title" class="entry-title">
+                  {.passthrough?}
+                    <a href="{sourceUrl}" class="entry-title-passthrough" target="_blank">{title}</a>
+                  {.or}
+                    <a href="{fullUrl}">{title}</a>
+                  {.end}
+                </h1>
+              <div class="info-container">
+                  {.excerpt?}
+                    {excerpt}
+                  {.or}
+                    {.section body}
+                      {@}
+                    {.end}
+                  {.end}
+                  <div class="readmore-bottom">
+                    <p class="date">
+                      <time class="published" datetime="{addedOn|date %F}">{addedOn|date %e %B, %Y}</time>
+                      {.section categories}
+                      <span class="bull-padding">&bull;</span>
+                      <span class="category-style">
+                        {.repeated section @}
+                          {@}||
+                        {.end}
+                      {.end}
+                      </span>
+                    </p><br />
+                    <a class="readmore-mobile" href="{fullUrl}">Read More</a>
+                  </div>
+                  {.if postItemInjectCode}
+                  <div class="entry-injection">
+                    {postItemInjectCode}
+                  </div>
+                  {.end}    
+            </div>               
+          </article>
+        </div>
+      </div> <!-- row -->
+      {.end}<!-- index2 -->
+    {.end}<!-- required items -->
+    </div><!-- col-md-4 -->
+  
+      {.repeated section items}
+{.equal? @index 1}
+          <div class="col-md-8">
+            <article class="entry cf {@|item-classes} blogPost1 article-8" id="article-{id}" data-item-id="{id}">
+              {.main-image?}
+                <div class="main-image-wrapper">
+                  <a href="{fullUrl}"><div id="big-block" class="main-image-big content-fill height-fix"><img class="response-img" {@|image-meta} /></div></a>
+                </div>
+              {.end}
+
+              <div class="entry-title-wrapper index-one">
+                <div class="entry-content big-8">
+                  <h1 data-content-field="title" class="entry-title">
+                  {.passthrough?}
+                    <a href="{sourceUrl}" class="entry-title-passthrough" target="_blank">{title}</a>
+                  {.or}
+                    <a href="{fullUrl}">{title}</a>
+                  {.end}
+                  </h1>
+                <div class="info-container">
+                    {.excerpt?}
+                      {excerpt}
+                    {.or}
+                      {.section body}
+                        {@}
+                      {.end}
+                    {.end}
+                  <div class="readmore-bottom">
+                    <p class="date">
+                      <time class="published" datetime="{addedOn|date %F}">{addedOn|date %B %e, %Y}</time>          
+                    {.section categories}
+                    <span class="bull-padding">&bull;</span>
+                      <span class="category-style">
+                        {.repeated section @}
+                          {@}||
+                        {.end}
+                      {.end}
+                      </span>
+                    </p><br />
+                    <a class="readmore-mobile" href="{fullUrl}">Read More</a>
+                  </div>
+                </div>
+                  {.if postItemInjectCode}
+                  <div class="entry-injection">
+                    {postItemInjectCode}
+                  </div>
+                  {.end}    
+                </div>
+              </div>                
+            </article>
+          </div>
+        </div> <!-- row -->
+
+      {.or}{.equal? @index 2}
+
+      <div class="row">
+        <div class="col-sm-12">
+          <article class="entry cf {@|item-classes} disappear-show-index" id="article-{id}" data-item-id="{id}">
+            {.main-image?}
+            <div class="main-image-wrapper">
+              <a href="{fullUrl}"><div class="main-image content-fill top-entry-padding"><img class="response-img" {@|image-meta} /></div></a>
+            </div>
+            {.end}
+
+            <div class="entry-title-wrapper">
+              <div class="entry-content">
+                <h1 data-content-field="title" class="entry-title">
+                  {.passthrough?}
+                    <a href="{sourceUrl}" class="entry-title-passthrough" target="_blank">{title}</a>
+                  {.or}
+                    <a href="{fullUrl}">{title}</a>
+                  {.end}
+                </h1>
+              <div class="info-container">
+                  {.excerpt?}
+                    {excerpt}
+                  {.or}
+                    {.section body}
+                      {@}
+                    {.end}
+                  {.end}
+                  <div class="readmore-bottom">
+                    <p class="date">
+                      <time class="published" datetime="{addedOn|date %F}">{addedOn|date %e %B, %Y}</time>
+                      {.section categories}
+                      <span class="bull-padding">&bull;</span>
+                      <span class="category-style">
+                        {.repeated section @}
+                          {@}||
+                        {.end}
+                      {.end}
+                      </span>
+                    </p><br />
+                    <a class="readmore-mobile" href="{fullUrl}">Read More</a>
+                  </div>
+                
+                  {.if postItemInjectCode}
+                  <div class="entry-injection">
+                    {postItemInjectCode}
+                  </div>
+                  {.end}    
+            </div>               
+          </article>
+        </div>
+      </div>
+      {.end}<!-- index2 -->
+
+{.or}{.equal? @index 3}
+
+<div class="row">
+  <div class="col-md-8">
+    <article class="entry cf {@|item-classes} blogPosts" id="article-{id}" data-item-id="{id}">
+      {.main-image?}
+        <div class="main-image-wrapper">
+          <a href="{fullUrl}"><div class="main-image content-fill"><img class="response-img" {@|image-meta} /></div></a>
+        </div>
+      {.end}
+              <div class="entry-title-wrapper">
+                <div class="entry-content">
+                  <h1 data-content-field="title" class="entry-title">
+                  {.passthrough?}
+                    <a href="{sourceUrl}" class="entry-title-passthrough" target="_blank">{title}</a>
+                  {.or}
+                    <a href="{fullUrl}">{title}</a>
+                  {.end}
+                  </h1>
+              <div class="info-container">
+                    {.excerpt?}
+                      {excerpt}
+                    {.or}
+                      {.section body}
+                        {@}
+                      {.end}
+                    {.end}
+                  <div class="readmore-bottom">
+                    <p class="date">
+                      <time class="published" datetime="{addedOn|date %F}">{addedOn|date %e %B, %Y}</time>
+                      {.section categories}
+                      <span class="bull-padding">&bull;</span>
+                      <span class="category-style">
+                        {.repeated section @}
+                          {@}||
+                        {.end}
+                      {.end}
+                      </span>
+                    </p><br />
+                    <a class="readmore-mobile" href="{fullUrl}">Read More</a>
+                  </div>
+              </div>
+                  {.if postItemInjectCode}
+                  <div class="entry-injection">
+                    {postItemInjectCode}
+                  </div>
+                  {.end}    
+                </div>
+              </div> 
+    </article>
+  </div>
+
+{.or}{.equal? @index 4}
+
+  <div class="col-md-4">
+    <article class="entry cf {@|item-classes} blogPosts" id="article-{id}" data-item-id="{id}">
+      {.main-image?}
+        <div class="main-image-wrapper">
+          <a href="{fullUrl}"><div class="main-image content-fill"><img class="response-img" {@|image-meta} /></div></a>
+        </div>
+      {.end}
+              <div class="entry-title-wrapper">
+                <div class="entry-content">
+                  <h1 data-content-field="title" class="entry-title">
+                  {.passthrough?}
+                    <a href="{sourceUrl}" class="entry-title-passthrough" target="_blank">{title}</a>
+                  {.or}
+                    <a href="{fullUrl}">{title}</a>
+                  {.end}
+                  </h1>
+              <div class="info-container">
+                    {.excerpt?}
+                      {excerpt}
+                    {.or}
+                      {.section body}
+                        {@}
+                      {.end}
+                    {.end}
+                  <div class="readmore-bottom">
+                    <p class="date">
+                      <time class="published" datetime="{addedOn|date %F}">{addedOn|date %e %B, %Y}</time>
+                    {.section categories}
+                    <span class="bull-padding">&bull;</span>
+                      <span class="category-style">
+                        {.repeated section @}
+                          {@}||
+                        {.end}
+                      {.end}
+                      </span>
+                    </p><br />
+                    <a class="readmore-mobile" href="{fullUrl}">Read More</a>   
+                  </div>  
+              </div>             
+                  {.if postItemInjectCode}
+                  <div class="entry-injection">
+                    {postItemInjectCode}
+                  </div>
+                  {.end}    
+                </div>
+              </div>    
+    </article>
+  </div>
+</div>
+{.or}{.equal? @index 5}
+
+<div class="row">
+  <div class="col-md-4">
+    <article class="entry cf {@|item-classes} blogPosts" id="article-{id}" data-item-id="{id}">
+      {.main-image?}
+        <div class="main-image-wrapper">
+          <a href="{fullUrl}"><div class="main-image content-fill"><img class="response-img" {@|image-meta} /></div></a>
+        </div>
+      {.end}
+              <div class="entry-title-wrapper">
+                <div class="entry-content">
+                  <h1 data-content-field="title" class="entry-title">
+                  {.passthrough?}
+                    <a href="{sourceUrl}" class="entry-title-passthrough" target="_blank">{title}</a>
+                  {.or}
+                    <a href="{fullUrl}">{title}</a>
+                  {.end}
+                  </h1>
+              <div class="info-container">
+                    {.excerpt?}
+                      {excerpt}
+                    {.or}
+                      {.section body}
+                        {@}
+                      {.end}
+                    {.end}
+                  <div class="readmore-bottom">
+                    <p class="date">
+                      <time class="published" datetime="{addedOn|date %F}">{addedOn|date %e %B, %Y}</time>
+                    {.section categories}
+                    <span class="bull-padding">&bull;</span>
+                      <span class="category-style">
+                        {.repeated section @}
+                          {@}||
+                        {.end}
+                      {.end}
+                      </span>
+                    </p><br />
+                    <a class="readmore-mobile" href="{fullUrl}">Read More</a>
+                  </div>
+              </div>
+                  {.if postItemInjectCode}
+                  <div class="entry-injection">
+                    {postItemInjectCode}
+                  </div>
+                  {.end}    
+                </div>
+              </div> 
+    </article>
+  </div>
+{.or}{.equal? @index 6}
+
+  <div class="col-md-8">
+    <article class="entry cf {@|item-classes} blogPosts" id="article-{id}" data-item-id="{id}">
+      {.main-image?}
+        <div class="main-image-wrapper">
+          <a href="{fullUrl}"><div class="main-image content-fill"><img class="response-img" {@|image-meta} /></div></a>
+        </div>
+      {.end}
+              <div class="entry-title-wrapper">
+                <div class="entry-content">
+                  <h1 data-content-field="title" class="entry-title">
+                  {.passthrough?}
+                    <a href="{sourceUrl}" class="entry-title-passthrough" target="_blank">{title}</a>
+                  {.or}
+                    <a href="{fullUrl}">{title}</a>
+                  {.end}
+                  </h1>
+              <div class="info-container">
+                    {.excerpt?}
+                      {excerpt}
+                    {.or}
+                      {.section body}
+                        {@}
+                      {.end}
+                    {.end}
+                  <div class="readmore-bottom">
+                    <p class="date">
+                      <time class="published" datetime="{addedOn|date %F}">{addedOn|date %e %B, %Y}</time>
+                      {.section categories}
+                      <span class="bull-padding">&bull;</span>
+                      <span class="category-style">
+                        {.repeated section @}
+                          {@}||
+                        {.end}
+                      {.end}
+                      </span>
+                    </p><br />
+                    <a class="readmore-mobile" href="{fullUrl}">Read More</a>
+                  </div>
+              </div>
+                  {.if postItemInjectCode}
+                  <div class="entry-injection">
+                    {postItemInjectCode}
+                  </div>
+                  {.end}    
+                </div>
+              </div>   
+    </article>
+  </div>
+</div>
+{.or}{.equal? @index 7}
+{.or}{.equal? @index 8}
+{.or}{.equal? @index 9}
+{.or}{.equal? @index 10}
+
+{.end}<!-- index10 -->
+{.end}<!-- index9 -->
+{.end}<!-- index8 -->
+{.end}<!-- index7 -->
+{.end}<!-- index6 -->
+{.end}<!-- index5 -->
+{.end}<!-- index4 -->
+{.end}<!-- index3 -->
+{.end}<!-- index1 -->
+{.end}<!-- repeated -->
+  
+</section>

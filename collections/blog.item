@@ -1,0 +1,63 @@
+  <section class="blog-item">
+
+  {.section item}
+    <article class="entry {@|item-classes} clear" id="article-{id}" data-item-id="{id}">
+
+    <div class="entry-title-wrapper blogpost-item-container">
+      <h1 data-content-field="title" class="entry-title">
+      {.passthrough?}
+        <a href="{sourceUrl}" class="entry-title-passthrough" target="_blank">{title}</a>
+      {.or}
+        <a href="{fullUrl}">{title}</a>
+      {.end}
+      </h1>
+      <p class="date date-styling">
+        <time class="published" datetime="{addedOn|date %F}">{addedOn|date %B %e, %Y}</time>
+      {.section categories}
+        <span class="bull-padding">&bull;</span>
+        <span class="category-style">
+          {.repeated section @}
+            {@}
+          {.end}
+      {.end}
+      </span>
+      </p>
+    </div>
+
+
+      <div class="entry-content blogpost-item-container">
+        
+        {.section body}
+          {@}
+        {.end}
+
+        <p class="entry-actions">
+          {.comments?}
+          <a class="entry-comments" href="{fullUrl}#comments-outer-wrapper" title="Comments">
+          {.if websiteSettings.disqusShortname}
+            {@|comment-link}
+          {.or}
+          {.section publicCommentCount}
+            {@} Comment{@|pluralize}
+            {.or}
+              Comment
+            {.end}
+          {.end}
+          </a>
+        {.end}
+        {@|like-button}{@|social-button-inline}
+        </p>
+
+        {.if postItemInjectCode}
+        <div class="entry-injection">
+          {postItemInjectCode}</div>
+        {.end}
+
+      </div>
+      
+    </article>
+
+    {.comments?}<div id="comments-outer-wrapper">{@|comments}</div>{.end}
+  {.end}
+
+</section>

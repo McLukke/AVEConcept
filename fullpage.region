@@ -1,0 +1,800 @@
+<!doctype html>
+
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    {.if template.mobileStylesEnabled}
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    {.end}
+    {squarespace-headers}
+    <squarespace:script src="site.js" combo="true" />
+    <squarespace:script src="helpers.js" combo="true" />
+
+    <script src="//ajax.googleapis.com/ajax/libs/jquery/2.0.0/jquery.min.js"></script>
+    <script>window.jQuery || document.write('<script src="scripts/jquery-2.0.0.min.js"><\/script>')</script>
+    <meta property="og:image" content="http://static.aveconcept.com/assets/og.jpg" />
+    <link rel="stylesheet" href="http://static.aveconcept.com/bower_components/bootstrap/dist/css/bootstrap.min.css">
+
+    <link rel="stylesheet" href="http://static.aveconcept.com/bower_components/bootstrap/dist/css/bootstrap-theme.min.css">
+
+    <link rel="stylesheet" href="http://static.aveconcept.com/bower_components/csshake/csshake.css">
+
+    <script src="http://static.aveconcept.com/bower_components/modernizr/modernizr.js"></script>
+
+    <link rel="stylesheet" type="text/css" href="http://static.aveconcept.com/bower_components/fullpage.js/jquery.fullPage.css" />
+    <link rel="stylesheet" type="text/css" href="http://static.aveconcept.com/css/site.css" />
+    <!-- <script src="/bower_components/jquery/dist/jquery.min.js"></script> -->
+
+
+    <!-- This following line is needed in case of using the default easing option or when using another
+     one rather than "linear" or "swing". You can also add the full jQuery UI instead of this file if you prefer -->
+    <script src="http://static.aveconcept.com/bower_components/jquery-ui/jquery-ui.min.js"></script>
+
+
+    <!-- This following line needed in the case of using the plugin option `scrollOverflow:true` -->
+    <script type="text/javascript" src="http://static.aveconcept.com/bower_components/jquery.slimscroll/jquery.slimscroll.min.js"></script>
+
+    <!-- <script type="text/javascript" src="/bower_components/jquery.transit/jquery.transit.js"></script> -->
+
+    <script type="text/javascript" src="http://static.aveconcept.com/bower_components/fullpage.js/jquery.fullPage.min.js"></script>
+<!-- <script type="text/javascript" src="/bower_components/fullpage.js/jquery.fullPage.js"></script> -->
+  </head>
+
+  <body id="{squarespace.page-id}" class="fullpage {squarespace.page-classes}{.if item}{.section item}{.section assetUrl} has-banner-image{.end}{.end}{.or}{.section collection}{.equal? typeName "index"}{.section collections}{.section 0}{.section mainImage} has-banner-image{.end}{.end}{.end}{.or}{.equal? typeName "album"}{.or}{.equal? typeName "gallery"}{.or}{.section mainImage} has-banner-image{.end}{.end}{.end}{.end}{.end}{.end}">
+
+    
+    <div id="mobileNav" data-content-field="navigation-mobileNav">
+      <squarespace:navigation navigationId="mainNav" template="navigation" />
+    </div>
+
+    <div class="site-wrapper">
+      <div class="site-inner-wrapper">
+      <!--CONTENT INJECTION POINT-->
+      {.if item}
+        <div id="header-wrapper">
+          <header id="header">
+            <div class="title-nav-wrapper">
+              {.section website}
+              <h1 data-content-field="site-title" class="site-title">
+                <a href="/" id="top">
+                  <img class="site-logo" src="/assets/ave@2x.png" alt="{siteTitle}" />
+                </a>
+              </h1>
+              {.end}
+              <a class="icon-menu" id="mobileMenu"></a>
+              <!--MAIN NAVIGATION-->
+              <div id="desktopNav" data-content-field="navigation-desktopNav">
+                <squarespace:navigation navigationId="mainNav" template="navigation" />
+              </div>
+            </div>
+          </header>
+        {.section item}
+          {.main-image?}
+          <div class="banner-image content-fill">
+            <img {@|image-meta} />
+            <div class="image-overlay-wrapper"></div>
+          </div>
+          {.end}
+          <div class="title-desc-wrapper{.main-image?} has-main-image{.or} no-main-image{.end}" data-content-field="main-image">
+            <div class="title-desc-inner" data-collection-id="{id}">
+              {.if startDate}
+              <h1 class="page-title">{title}</h1><br>
+              <div class="page-desc">
+                <p class="event-time">
+                  <time class="event-meta-heading">{startDate|date %A, %B %e, %Y}{.same-day?}{.or}{.if endDate} &ndash; {endDate|date %A, %B %e, %Y}{.end}{.end}</time><br>
+                  <time class="event-time-12hr"></span>{startDate|date %l:%M%P}{.same-day?}{.if endDate} &ndash; {endDate|date %l:%M%P}{.end}{.end}</time>
+                  <time class="event-time-24hr"></span>{startDate|date %H:%M}{.same-day?}{.if endDate} &ndash; {endDate|date %H:%M}{.end}{.end}</time>
+                </p>
+              </div>
+              {.or}
+              {.if productType}
+              <h1 class="page-title">{title}</h1><br>
+              {.if excerpt}<div class="page-desc">{excerpt}</div>{.end}
+              {.or}
+              <h1 class="page-title">
+                {.passthrough?}
+                <a href="{sourceUrl}" class="entry-title-passthrough" target="_blank">{title}</a>
+                {.or}
+                {title}
+                {.end}
+              </h1><br>
+              <div class="page-desc">
+                <p class="date entry-author">
+                  <time class="published" datetime="{addedOn|date %F}">{addedOn|date %B %e, %Y}</time>{.section author}
+                  <span class="author-name"><br>
+                    <em>by</em> <a href="{collection.fullUrl}?author={author.id}">{displayName}</a>
+                  </span>{.end}
+                </p>
+              </div>
+              {.end}
+            {.end}
+            </div>
+          </div>
+        </div>
+
+        <section id="content-wrapper">
+          <div class="sqs-cart-dropzone"></div>
+          <div class="content">
+
+            <div class="content-inner" data-content-field="main-content">
+              {squarespace.main-content}
+            </div>
+            {.if categories || tags || sourceUrl || pagination}
+            <footer class="entry-footer clear">
+              <div class="outer-wrapper">
+                <div class="wrapper">
+                  {.if categories || tags || sourceUrl}
+                  <div class="entry-meta">
+                    {.section categories}<div><em>{.equal? collection.typeName "products"}Found{.or}Posted{.end} in</em> {.repeated section @}<a href="{collection.fullUrl}?category={@|url-encode}" rel="tag">{@}</a>{.alternates with}, {.end}</div>{.end}
+                    {.if categories && tags} <em>and</em> {.end}
+                    {.section tags}<div><em>tagged with</em> {.repeated section @}<a href="{collection.fullUrl}?tag={@|url-encode}" rel="tag">{@}</a>{.alternates with}, {.end}</div>{.end}
+                    {.passthrough?}
+                    {.or}
+                    {.section sourceUrl}<div class="source-url"><a href="{sourceUrl}" target="_blank">Source</a></div>{.end}
+                    {.end}
+                  </div>
+                  {.end}
+
+                  {.if pagination}
+                  <nav class="pagination cf">
+                    {.if startDate}
+                    <a href="{collection.fullUrl}" class="back-to-all">Back to All</a>
+                    {.if pagination.prevItem}<div class="newer"><a href="{pagination.prevItem.fullUrl}">Previous</a></div>{.or}<div class="newer mute">Previous</div>{.end}
+                    {.if pagination.nextItem}<div class="older"><a href="{pagination.nextItem.fullUrl}">Next</a></div>{.or}<div class="older mute">Next</div>{.end}
+                    {.or}
+                    {.if productType}
+                    <a href="{collection.fullUrl}" class="back-to-all">Back to All</a>
+                    {.if pagination.prevItem}<div class="newer"><a href="{pagination.prevItem.fullUrl}">Previous</a></div>{.or}<div class="newer mute">Previous</div>{.end}
+                    {.if pagination.nextItem}<div class="older"><a href="{pagination.nextItem.fullUrl}">Next</a></div>{.or}<div class="older mute">Next</div>{.end}
+                    {.or}
+                    {.if pagination.prevItem}<div class="newer"><a href="{pagination.prevItem.fullUrl}">Newer</a></div>{.or}<div class="newer mute">Newer</div>{.end}
+                    {.if pagination.nextItem}<div class="older"><a href="{pagination.nextItem.fullUrl}">Older</a></div>{.or}<div class="older mute">Older</div>{.end}
+                    {.end}
+                    {.end}
+                  </nav>
+                  {.end}
+                </div>
+              </div>
+            </footer>
+            {.end}
+          </div>
+        </section>
+        {.end}
+        {.or}
+        {.index?}
+        <header id="header">
+          <div class="title-nav-wrapper">
+            {.section website}
+            <h1 data-content-field="site-title" class="site-title">
+              <a href="/" id="top">
+                <img class="site-logo" src="/assets/ave@2x.png" alt="{siteTitle}" />
+              </a>
+            </h1>
+            <a class="icon-menu" id="mobileMenu"></a>
+            {.end}
+            <!--MAIN NAVIGATION-->
+            <div id="desktopNav" data-content-field="navigation-desktopNav">
+              <squarespace:navigation navigationId="mainNav" template="navigation" />
+            </div>
+          </div>
+        </header>
+        <section id="content-wrapper" data-content-field="main-content">
+          <div class="sqs-cart-dropzone"></div>
+          {squarespace.main-content}
+          <div class="back-to-top"></div>
+        </section>
+        {.or}
+        <div id="header-wrapper">
+          <header id="header">
+            <div class="title-nav-wrapper">
+              {.section website}
+              <h1 data-content-field="site-title" class="site-title">
+                <a href="/" id="top">
+                  <img class="site-logo" src="/assets/ave@2x.png" alt="{siteTitle}" />
+                </a>
+              </h1>
+              <a class="icon-menu" id="mobileMenu"></a>
+              {.end}
+              <!--MAIN NAVIGATION-->
+              <div id="desktopNav" data-content-field="navigation-desktopNav">
+                <squarespace:navigation navigationId="mainNav" template="navigation" />
+              </div>
+            </div>
+          </header>
+
+          {.section collection}
+          {.equal? typeName "gallery"}
+          {.or}
+          {.equal? typeName "album"}
+          {.or}
+          {.section mainImage}
+          <div class="banner-image content-fill">
+            <img {@|image-meta} />
+            <div class="image-overlay-wrapper"></div>
+          </div>
+          {.end}
+          <div class="title-desc-wrapper{.main-image?} has-main-image{.or} no-main-image{.end}{.if description}{.or} no-description{.end}" data-collection-field="main-image">
+            <div class="title-desc-inner" data-collection-id="{id}">
+              <!-- <h1 class="page-title">{title}</h1><br> -->
+              {.if description}<div class="page-desc">{description}</div>{.end}
+            </div>
+          </div>
+          {.end}
+          {.end}
+        {.end}
+        </div>
+
+        <section id="content-wrapper">
+          <div class="sqs-cart-dropzone"></div>
+          <div class="content">
+            <div class="content-inner" data-content-field="main-content">
+            {squarespace.main-content}
+            </div>
+            {.section collection}
+              {.equal? typeName "events"}
+              {.or}
+                {.if pagination}
+            <footer class="entry-footer clear">
+              <div class="outer-wrapper">
+                <div class="wrapper">
+                  <nav class="pagination cf">
+                    {.if pagination.prevPage}<div class="newer"><a href="{pagination.prevPageUrl}">Newer</a></div>{.or}<div class="newer mute">Newer</div>{.end}
+                    {.if pagination.nextPage}<div class="older"><a href="{pagination.nextPageUrl}">Older</a></div>{.or}<div class="older mute">Older</div>{.end}
+                  </nav>
+                </div>
+              </div>
+            </footer>
+                {.end}
+              {.end}
+            {.end}
+          </div>
+        </section>
+        {.end}
+      {.end}
+
+      <!-- <div id="collectionContentCover">
+      </div> -->
+      <!-- <div id="collectionContent"> -->
+
+        <!-- <div id="lazyPreloader">
+          <img src="http://static.aveconcept.com/images/product-background-1.png"/>
+          <img src="http://static.aveconcept.com/images/product-background-2.png"/>
+          <img src="http://static.aveconcept.com/images/product-1-1.png"/>
+          <img src="http://static.aveconcept.com/images/product-1-2.png"/>
+          <img src="http://static.aveconcept.com/images/product-2-1.png"/>
+          <img src="http://static.aveconcept.com/images/product-2-2.png"/>
+        </div> -->
+
+        <div id="fullpage">
+
+          <div class="section slider" id="_MoodSlider">
+            <!-- <div id="skyLogo">SKY</div> -->
+            <!-- <div class="slide" id="moodSlide-1"></div>
+            <div class="slide" id="moodSlide-2"></div>
+            <div class="slide" id="moodSlide-3"></div> -->
+            <!-- <div class="slide" id="moodSlide-4"></div> -->
+            <!-- <div class="slide" id="moodSlide-5"></div>
+            <div class="slide" id="moodSlide-6"></div>
+            <div class="slide" id="moodSlide-7"></div> -->
+            <div class="container-fluid">
+
+              <div class="row content">
+                <div class="col-xs-1 col-sm-4 col-md-6"></div>
+                <div class="col-xs-10 col-sm-8 col-md-6" id="">
+                  AVE introduces a world above the SKY.<br/>
+                  Where clouds elevate senses and indulgence takes hold.
+                </div>
+              </div>
+
+            </div>
+          </div>
+
+          <div class="section pageSlide" id="_Curves">
+            <div class="slide" id="curvesSlide-1">
+              <div class="container-fluid">
+                <div class="row">
+                  <div class="hidden-xs col-sm-1"></div>
+                  <div class="col-xs-10 col-sm-5 col-md-6 col-lg-5 curves-title title">Made for pleasure</div>
+                </div>
+                <div class="row">
+                  <div class="hidden-xs col-sm-1"></div>
+                  <div class="col-xs-10 col-sm-5 col-md-6 col-lg-5 curves-content content">
+                    <p>With cushioned curves and a touch of milky silicone, our SKY series is designed to create undulating sensations.</p>
+                    <p>Its groundbreaking design is your guide to reaching the highest plane of pleasure; a state of pure elation.</p>
+                  </div>
+
+                </div>
+                <div class="row">
+                  <div class="hidden-xs col-sm-1"></div>
+                  <div class="col-xs-10 col-sm-11 curves-content content">
+                    <a href="#curves/1"><img class="button" src="http://static.aveconcept.com/images/curves-btn-1.png" width="251"/></a>
+                  </div>
+
+                </div>
+              </div>
+            </div>
+            <div class="slide" id="curvesSlide-2">
+              <div class="container-fluid">
+                <div class="row">
+                  <div class="col-xs-1 col-sm-3 col-md-6 col-lg-7"></div>
+                  <div class="col-xs-10 col-sm-7 col-md-5 col-lg-5 curves-title title">Curves That Lift you Higher</div>
+                </div>
+
+                <div class="row">
+                  <div class="col-xs-1 col-sm-3 col-md-6 col-lg-7"></div>
+                  <div class="col-xs-10 col-sm-7 col-md-5 col-lg-5 curves-content content">
+                    <p>With soft ridges, SKY allows multi touch point pleasure. With bumps that tease and caress all the right spots, you’ll drift away at a moments touch.</p>
+                  </div>
+                </div>
+                <div class="row">
+                  <div class="col-xs-1 col-sm-3 col-md-6 col-lg-7"></div>
+                  <div class="col-xs-10 col-sm-9 col-md-6 col-lg-5 curves-content content">
+                    <a href="#curves"><img class="button" src="http://static.aveconcept.com/images/curves-btn-2.png" width="251"/></a>
+                  </div>
+
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="section" id="_SevenHeaven">
+            <div class="container-fluid">
+              <div class="row">
+                <div class="col-xs-1 col-sm-1 col-md-3"></div>
+                <div class="col-xs-10 col-sm-10 col-md-6 title" id="_SevenHeavenTitle">REACHING SEVENTH HEAVEN</div>
+                <div class="col-xs-1"></div>
+              </div>
+              <div class="row">
+                <div class="col-xs-1 col-sm-1 col-md-3"></div>
+                <div class="col-xs-10 col-sm-10 col-md-6 content" id="_SevenHeavenContent">
+                  <p>Reaching seventh heaven is only a click away, with seven different vibration patterns tailored to elevate your senses, leaving you spoilt for choice. Each mode designed to remain discreet, which means you can run away with your desires anywhere you like, even in the tub.</p>
+                </div>
+                <div class="col-xs-1"></div>
+              </div>
+              <div class="row">
+                <div class="col-xs-12" id="_SevenHeavenProductArtworkShakes">
+                  <img class="vibrator vibration" src="http://static.aveconcept.com/images/product-artwork.png"/>
+                </div>
+              </div>
+              <div class="row">
+                <div class="col-xs-12" id="_SevenHeavenProductArtwork">
+                  <img class="vibrator" src="http://static.aveconcept.com/images/product-artwork.png"/>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="section" id="_Smooth">
+            <div class="container-fluid">
+              <div class="row">
+                <div class="col-xs-12 smooth-title title">SILKY SMOOTH</div>
+              </div>
+              <div class="row">
+                <div class="col-xs-12 smooth-content content">
+                  <p>Encased with silicone, SKY is not only body-safe, but provides the smoothest of touches. Paired with SKY’s rolling curves, its silk like feel will have you drifting on cloud 9.</p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="section" id="_Portable">
+            <div class="container-fluid">
+              <div class="row">
+                <div class="hidden-xs col-sm-1"></div>
+                <div class="col-xs-8 col-sm-6 col-md-5 portable-title title">ANYWHERE YOU GO</div>
+              </div>
+              <div class="row">
+                <div class="hidden-xs col-sm-1"></div>
+                <div class="col-xs-8 col-sm-6 col-md-5 portable-content content">
+                  <p>Sky is designed to tantalize wherever you please. It’s travel friendly, which means you can run away with your desires anywhere you like, including the bathtub.</p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="section pageSlide" id="_Design">
+            <div class="slide" id="designSlide-1">
+              <div id="designerVideoBG">
+              </div>
+              <div class="container-fluid" style="z-index:10000;">
+                <div class="row">
+                  <div class="col-xs-1 hidden-xs"></div>
+                  <div class="col-xs-11 col-sm-7 col-md-5 col-lg-5 designer-quote">“The playful design of sky tells a light-hearted erotic tale of weightless thoughts with no destination, like the drifting clouds touched by thin light, gradually surrendering to ever intensifying swirls until ultimately being lost in ecstasy... welcome into seventh heaven.”</div>
+                </div>
+
+                <div class="row">
+                  <div class="col-xs-1 hidden-xs"></div>
+                  <div class="col-xs-11 col-sm-7 col-md-5 col-lg-5 designer-signoff">
+                    FRÉDÉRIC GOORIS
+                  </div>
+                </div>
+                <div class="row">
+                  <div class="col-xs-1 hidden-xs"></div>
+                  <div class="col-xs-11 col-sm-7 col-md-5 col-lg-5 designer-signature">
+                    Product Designer<br/>
+                    <a href="#design/1"><img class="button" src="http://static.aveconcept.com/images/to-designer-btn.png" width="251"/></a>
+                  </div>
+                </div>
+
+
+              </div>
+
+            </div>
+            <div class="slide" id="designSlide-2">
+              <div class="container-fluid">
+                <div class="row">
+                  <div class="hidden-xs col-sm-2 col-md-4 col-lg-5"></div>
+                  <div class="col-xs-11 col-sm-8 col-md-7 col-lg-6 designer-signoff">
+                    FRÉDÉRIC GOORIS
+                  </div>
+                </div>
+                <div class="row">
+                  <div class="hidden-xs col-sm-2 col-md-4 col-lg-5"></div>
+                  <div class="col-xs-11 col-sm-8 col-md-7 col-lg-6 designer-quote">Originally from Brussels, Frédéric Gooris is an industrial designer who has lived and worked all over the world. He started his career in Paris and Milan working for design gurus Philippe Starck and Stefano Giovannoni. Today he heads Studio Gooris, fusing innovation and storytelling into emotional products. He works with global brands ranging from Alessi, Seiko and Bombol to JCpenny and Levis.</div>
+                </div>
+                <div class="row">
+                  <div class="hidden-xs col-sm-2 col-md-4 col-lg-5"></div>
+                  <div class="col-xs-11 col-sm-8 col-md-7 col-lg-6 designer-signature">
+
+                    <a href="#design"><img class="button" src="http://static.aveconcept.com/images/designer-back-btn.png" width="251"/></a>
+                  </div>
+                </div>
+
+
+
+
+
+              </div>
+            </div>
+
+          </div>
+
+          <div class="section pageSlide" id="_Charger">
+            <div id="chargers" class="container-fluid">
+              <div class="row">
+                <div class="col-xs-6 col-sm-3"><img src="http://static.aveconcept.com/images/chargers.png" /></div>
+              </div>
+            </div>
+
+            <div id="chargersDescriptions" class="container-fluid">
+              <div class="row">
+                <div class="hidden-xs col-sm-1"></div>
+                <div class="col-xs-11 col-sm-6 charger-title title">ECO-FRIENDLY</div>
+              </div>
+              <div class="row">
+                <div class="hidden-xs col-sm-1"></div>
+                <div class="col-xs-7 col-sm-6 charger-content content">
+                  <p>Conscious of conserving energy, we've chosen to use a specially designed USB cable meaning no adapters and less electrical waste. You can now charge your SKY products with ease and a clear conscience.</p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="section pageSlide" id="_Dark">
+
+            <div class="container-fluid">
+              <div class="row">
+                <div class="hidden-xs col-sm-7"></div>
+                <div class="col-xs-8 col-sm-4 charger-title title">READY WHEN YOU ARE</div>
+              </div>
+
+              <div class="row">
+                <div class="hidden-xs col-sm-7"></div>
+                <div class="col-xs-8 col-sm-4 charger-content content">
+                  <p>Anytime, anywhere. You should never wait for indulgence. Day or night, SKY’s subtle design brings limitless eroticism.</p>
+                </div>
+              </div>
+            </div>
+            <div id="chargerOn" class="charger-background"></div>
+            <div id="chargerOff" class="charger-background"></div>
+          </div>
+
+          <div class="section slider" id="_ProductSlider">
+            <div class="slide" id="productSlider-1"></div>
+            <div class="slide" id="productSlider-2"></div>
+            <div class="slide" id="productSlider-3"></div>
+            <div class="slide" id="productSlider-6"></div>
+            <!-- <div class="slide" id="productSlider-5"></div>
+            <div class="slide" id="productSlider-6"></div> -->
+          </div>
+
+          <div class="section" id="_Products">
+            <div id="productBG-1" class="product-background"></div>
+            <div id="productBG-2" class="product-background"></div>
+            <div id="productContainer" class="container-fluid">
+              <div class="row">
+                <div class="col-xs-1 hidden-sm hidden-xs"></div>
+                <div class="col-xs-5 col-sm-4 col-md-3"></div>
+                <div id="product-2-1" class="col-xs-12 col-sm-12 col-md-7 product-shot selected default"></div>
+                <div id="product-2-2" class="col-xs-12 col-sm-12 col-md-7 product-shot"></div>
+                <div id="product-1-1" class="col-xs-12 col-sm-12 col-md-7 product-shot"></div>
+                <div id="product-1-2" class="col-xs-12 col-sm-12 col-md-7 product-shot"></div>
+              </div>
+            </div>
+            <div id="productSelectContainer" class="container-fluid">
+              <div class="row hidden-md hidden-lg">
+                <div class="col-xs-7 product-title title">Product</div>
+                <div class="col-xs-5 product-title title">Colour</div>
+              </div>
+
+              <div class="row hidden-md hidden-lg">
+                <div class="col-xs-7 product-content content product-type-selectors">
+                  <span class="productBtnSet-2"><img onclick="setProduct(2)" class="button" src="http://static.aveconcept.com/images/alto-btn-white.png"/> <img onclick="setProduct(1)" class="button" src="http://static.aveconcept.com/images/cirrus-btn-clear.png"/></span><span class="productBtnSet-1"><img onclick="setProduct(2)" class="button" src="http://static.aveconcept.com/images/alto-btn-clear.png"/> <img onclick="setProduct(1)" class="button" src="http://static.aveconcept.com/images/cirrus-btn-white.png"/></span>
+                </div>
+                <div class="col-xs-5 product-content content">
+                  <img onclick="setColour(1)" class="button" src="http://static.aveconcept.com/images/colour-1-1.png" width="25"/> <img onclick="setColour(2)" class="button" src="http://static.aveconcept.com/images/colour-2-1.png" width="25"/>
+                </div>
+              </div>
+
+
+              <div class="row hidden-xs hidden-sm">
+                <div class="hidden-xs hidden-sm col-sm-1"></div>
+                <div class="col-xs-5 col-sm-6 product-title title">Product</div>
+              </div>
+              <div class="row hidden-xs hidden-sm">
+                <div class="hidden-xs hidden-sm col-sm-1"></div>
+                <div class="col-xs-12 col-sm-6 col-md-4 product-content content product-type-selectors">
+                  <span class="productBtnSet-2"><img onclick="setProduct(2)" class="button" src="http://static.aveconcept.com/images/alto-btn-white.png"/> <img onclick="setProduct(1)" class="button" src="http://static.aveconcept.com/images/cirrus-btn-clear.png"/></span><span class="productBtnSet-1"><img onclick="setProduct(2)" class="button" src="http://static.aveconcept.com/images/alto-btn-clear.png"/> <img onclick="setProduct(1)" class="button" src="http://static.aveconcept.com/images/cirrus-btn-white.png"/></span>
+                </div>
+              </div>
+              <div class="row hidden-xs hidden-sm">
+                <div class="hidden-xs hidden-sm col-sm-1"></div>
+                <div class="col-xs-5 col-sm-6 col-md-4 product-title title">&nbsp;</div>
+              </div>
+
+              <div class="row hidden-xs hidden-sm">
+                <div class="hidden-xs hidden-sm col-sm-1"></div>
+                <div class="col-xs-5 col-sm-6 col-md-4 product-title title">Colour</div>
+              </div>
+              <div class="row hidden-xs hidden-sm">
+                <div class="hidden-xs hidden-sm col-sm-1"></div>
+                <div class="col-xs-12 col-sm-6 col-md-4 product-content content">
+                  <img onclick="setColour(1)" class="button" src="http://static.aveconcept.com/images/colour-1-1.png" width="25"/> <img onclick="setColour(2)" class="button" src="http://static.aveconcept.com/images/colour-2-1.png" width="25"/>
+                </div>
+              </div>
+
+              <div class="row hidden-xs">
+                <div class="col-xs-12">&nbsp;</div>
+              </div>
+
+              <div class="row hidden-xs hidden-sm">
+                <div class="hidden-xs hidden-sm col-sm-1"></div>
+                <div class="col-xs-5 col-sm-6 col-md-4 product-title title">&nbsp;</div>
+              </div>
+
+              <div class="row">
+                <div class="hidden-xs hidden-sm col-md-1"></div>
+                <div id="specifications_block" class="hidden-xs col-sm-7 col-md-6">
+                  <div class="row">
+                    <div class="col-xs-12 product-title title">Specifications</div>
+                    <div class="col-xs-12"><img src="http://static.aveconcept.com//images/specs.png"/></div>
+                  </div>
+                </div>
+                <div id="warranty_block" class="hidden-xs col-sm-5 col-md-4">
+                  <div class="row">
+                    <div class="col-xs-1 hidden-sm product-title title"></div>
+                    <div class="col-sm-12 col-md-11 product-title title">Warranty</div>
+                    <div class="col-xs-1 hidden-sm product-title title"></div>
+                    <div class="col-sm-12 col-md-11"><img src="http://static.aveconcept.com//images/warranty.png"/></div>
+                  </div>
+                </div>
+              </div>
+
+
+            </div>
+          </div>
+        </div>
+
+
+
+      {.section collection}{.equal? typeName "products"}
+        {.section categories}
+        <footer id="categoryNav" class="entry-footer clear">
+          <div class="outer-wrapper">
+            <input type="checkbox" name="category-nav-toggle" id="categoryNavToggle" class="category-nav-toggle hidden" />
+            <label for="categoryNavToggle" class="category-nav-toggle-label" onclick></label>
+            <nav class="category-nav">
+              <ul class="category-nav-links">
+                <li{.if categoryFilter}{.or} class="active-link all"{.end}><a href="{fullUrl}">All</a></li>
+                {.repeated section @}
+                <li{.equal? categoryFilter @} class="active-link"{.end}><a href="{fullUrl}?category={@|url-encode}">{@}</a></li>
+                {.end}
+              </ul>
+            </nav>
+          </div>
+        </footer>
+        {.end}
+      {.end}{.end}
+
+        <!--FOOTER WITH OPEN BLOCK FIELD-->
+        <footer id="footer">
+          <!-- <div class="back-to-top-link"><a href="#top"><span class="arrow"></span>Top</a></div> -->
+          <div class="footer-wrapper">
+
+            <!-- <div id="socialBadges">
+              <a href="https://faceboot.com" target="_blank">
+                  <img class="sm-facebook-logo" src="/assets/facebook@2x.png" alt="Facebook" />
+              </a>
+              <a href="https://instagram.com/" target="_blank">
+                  <img class="sm-instagram-logo" src="/assets/instagram@2x.png" alt="Instagram" />
+              </a>
+            </div>
+
+            <div id="copyright">Copyright &copy; 2014 Ave. All rights reserved.</div> -->
+
+
+          </div>
+        </footer>
+
+      <!--INJECTION POINT FOR TRACKING SCRIPTS AND USER CONTENT FROM THE CODE INJECTION TAB-->
+      {squarespace-footers}
+      </div>
+    </div>
+  <script src="http://static.aveconcept.com/bower_components/bootstrap/dist/js/bootstrap.min.js"></script>
+    <script src="http://static.aveconcept.com/js/jquery.videobg.js"></script>
+        <script>
+
+          $(document).ready(function() {
+          //$('#fullpage').fullpage();
+          var videoBGFadedIn = false;
+            var touch = $('html').hasClass('touch');
+
+          $('#fullpage').fullpage({
+              verticalCentered: true,
+              resize : true,
+              //sectionsColor : ['#FFF', '#ccc', '#FFF', '#E4E8EC', '#ccc', '#ccc', '#ccc', '#ccc', '#FFF', '#ccc'],
+              // anchors:['moodSlider', 'curves', 'sevenHeaven', 'smooth', 'portable', 'design', 'charger', 'dark', 'productSlider', 'products'],
+              // scrollingSpeed: 700,
+              easing: 'easeInOutExpo',
+              //fixedElements: '#skyLogo',
+              //menu: true,
+              navigation: true,
+              navigationPosition: 'right',
+              navigationTooltips: ['MOOD', 'INTRODUCING', 'VIBRATION', 'SMOOTH', 'WATER PROOF', 'DESIGN', 'ECO FRIENDLY', 'IN THE DARK', 'PHOTOS', 'PRODUCTS'],
+              slidesNavigation: true,
+              slidesNavPosition: 'bottom',
+              //loopBottom: false,
+              //loopTop: false,
+              loopHorizontal: false,
+              autoScrolling: true,
+              //scrollOverflow: true,
+              css3: false,
+              //paddingTop: '3em',
+              //paddingBottom: '10px',
+              //normalScrollElements: '#_Curves',
+              //normalScrollElementTouchThreshold: 5,
+              //keyboardScrolling: true,
+              //touchSensitivity: 1,
+              //continuousVertical: false,
+              animateAnchor: false,
+              //sectionSelector: '.section',
+              //slideSelector: '.slide',
+              responsive: 737,
+
+              //events
+              onLeave: function(index, nextIndex, direction){
+
+                if (index == 3){
+                    $('.vibrator.vibration').removeClass('shake-constant shake shake-horizontal');
+                  }
+
+
+            if(index == 4){
+                      //$('#_Smooth .container-fluid').transition({ right: '-80vw' });
+                      $('#_Smooth .container-fluid').velocity("reverse");
+                  }
+
+                  if(index == 6){
+                      //$('#_Smooth .container-fluid').transition({ right: '-80vw' });
+                      $('#_Charger #chargers.container-fluid').velocity("reverse");
+                  }
+
+                  if(index == 7){
+                      $('#_Dark #chargerOff').hide();
+                      $('#_Dark #chargerOn').hide();
+                  }
+
+
+
+
+              },
+              afterLoad: function(anchorLink, index){
+
+                  if(anchorLink == 'smooth'){
+
+              $('#_Smooth .container-fluid').velocity({ right: 0 }, { easing: "easeInSine"}, 1000);
+
+
+                  }
+                  if (anchorLink == 'sevenHeaven'){
+                    setTimeout(function(){$('.vibrator.vibration').addClass('shake-constant shake shake-horizontal')}, 800);
+                  }
+
+                  if (anchorLink == 'charger'){
+                    $('#_Charger #chargers.container-fluid').velocity({ left: 0 }, 1000);
+                  }
+
+                  if (anchorLink == 'dark'){
+                    $('#_Dark #chargerOff').velocity("fadeIn", { delay: 100, duration: 1000 });
+                      $('#_Dark #chargerOn').velocity("fadeIn", { delay: 1500, duration: 1500 });
+                  }
+
+                  if (anchorLink == 'design'){
+                    if (!videoBGFadedIn)
+                    {
+                      if (!touch)
+                        $('#designSlide-1 #designerVideoBG').velocity("fadeIn", { delay: 500, duration: 3000 });
+                      videoBGFadedIn = true;
+                    }
+                  }
+
+
+              },
+              afterRender: function(){
+                if (!touch)
+                  $('#designSlide-1 #designerVideoBG').videoBG({mp4: 'http://static.aveconcept.com/designer-clouds.mp4', webm: 'http://static.aveconcept.com/designer-clouds.webm', ogv: 'http://static.aveconcept.com/designer-clouds.ogv', scale: true});
+              },
+              afterResize: function(){
+                if (!touch)
+                {
+                  $('#designSlide-1 #designerVideoBG').html('');
+
+                  $('#designSlide-1 #designerVideoBG').videoBG({mp4: 'http://static.aveconcept.com/designer-clouds.mp4', webm: 'http://static.aveconcept.com/designer-clouds.webm', ogv: 'http://static.aveconcept.com/designer-clouds.ogv', scale: true});
+                  $('#designSlide-1 #designerVideoBG').velocity("fadeIn", { delay: 500, duration: 3000 });
+                }
+              },
+              afterSlideLoad: function(anchorLink, index, slideAnchor, slideIndex){
+                // if(anchorLink == 'charger' && slideIndex == 1){
+               //        $('#_Charger #chargerOff').velocity("fadeIn", { delay: 100, duration: 1000 });
+               //        $('#_Charger #chargerOn').velocity("fadeIn", { delay: 1500, duration: 1500 });
+               //    }
+              },
+              onSlideLeave: function(anchorLink, index, slideIndex, direction){
+                // if(anchorLink == 'charger' && slideIndex == 1){
+               //        $('#_Charger #chargerOff').hide();
+               //        $('#_Charger #chargerOn').hide();
+               //    }
+              }
+          });
+
+        // $(window).scroll(function(e){
+        //   $el = $('#skyLogo');
+        //   console.log($(this).scrollTop());
+        //   if ($(this).scrollTop() > 200 && $el.css('position') != 'fixed'){
+        //     $('#skyLogo').css({'position': 'fixed', 'top': '0px'});
+        //     console.log('fixed');
+        //   }
+        //   if ($(this).scrollTop() < 200 && $el.css('position') == 'fixed')
+        //   {
+        //     $('#skyLogo').css({'position': 'absolute', 'top': '20px'});
+        //     console.log('not fixed');
+        //   }
+        // });
+      });
+        </script>
+        <script src="http://static.aveconcept.com/js/site.js"></script>
+  {.if template.mobileStylesEnabled}{.or}
+  <script>
+    Y.use('node', function() {
+      Y.on('domready', function() {
+        var move;
+        Y.all('.folder-child-wrapper a').each(function(a) {
+          a.on('touchstart', function() {
+            move = false;
+          });
+          a.on('touchmove', function() {
+            move = true;
+          });
+          a.on('touchend', function() {
+            if (move === false) {
+              window.location = a.getAttribute('href');
+            }
+          });
+        });
+      });
+    });
+  </script>
+  {.end}
+  </body>
+</html>

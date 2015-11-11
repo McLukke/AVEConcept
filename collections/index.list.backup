@@ -1,0 +1,39 @@
+{.section collection}
+  {.if collections.1}
+  <!-- section before repeated collections if there is at least a collection -->
+  <div class="container-fluid">
+  <div class="row">
+  {.repeated section collections}
+
+  
+  
+  
+  <div class="index-block" id="id_{urlId}" data-url-id="{urlId}">
+    <div class="title-desc-wrapper over-image{.section mainImage} has-main-image{.or} no-main-image{.end}" {.section mainImage}data-color-suggested="#{colorData.suggestedBgColor}"{.end}>
+
+      {.section mainImage}
+      <div class="title-desc-image content-fill" data-content-field="main-image">
+        <img {@|image-meta}/>
+        <div class="image-overlay-wrapper"></div>
+      </div>
+      {.end}
+
+      <div class="main-content" data-collection-id="{id}">
+        {mainContent}
+      </div>
+
+    </div>
+  </div>
+  
+  {.if description}
+    <script>
+      var tmpClass = stripHTML('{description}');
+      Y.one("#id_{urlId}").addClass(tmpClass);
+    </script>
+  {.end}
+  
+  {.end}
+  </div>
+  </div>
+  <!-- section after repeated collections if there is at least a collection -->
+{.end}
