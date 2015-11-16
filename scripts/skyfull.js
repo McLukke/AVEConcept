@@ -279,7 +279,7 @@ $(document).ready(function() {
 				triggerElement: '.grid_trigger',
 				duration: '70%'
 			}).setClassToggle('#productDescription', 'notVisible')
-			.addIndicators({name: 'fade about text - duration 70%'})
+			// .addIndicators({name: 'fade about text - duration 70%'})
 			.addTo(magicController);
 
 		// scroll specs 'up'
