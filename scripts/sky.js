@@ -107,11 +107,11 @@ $(document).ready(function() {
 					 scrollTop: $('#_Products').offset().top + 'px'
 		}, 'slow');
 
+		// hide description
+		$('#about_product' + skyProducts.productNumber).addClass('hidden');
+
 		// remove old selected button
     $('#productBtn' + skyProducts.productNumber).removeClass('selected');
-
-    // hide description
-    $('.about_product').addClass('hidden');
 
 		// set globals
 		var temp_id = $(this).parent().attr('id');
@@ -147,8 +147,8 @@ $(document).ready(function() {
     $('#product-' + skyProducts.productNumber + '-3').removeClass('hidden');
 
     // show description
-    $('#about_product' + skyProducts.productNumber).removeClass('hidden');
-	}); // click
+		$('#about_product' + skyProducts.productNumber).removeClass('hidden');
+	}); // pleasure_button
 
 	// product select scripts
 	$('.button').on('click', function (event){
