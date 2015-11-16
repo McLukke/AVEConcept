@@ -2298,16 +2298,20 @@ body.skyfull
 @media (min-width: 768px) and (max-width: 1024px) and (orientation: portrait) {
 #_Products #specifications {
 	/*margin-top: 130vh; // turn on when scrolling */
-	margin-top: -10%;
+	margin-top: -5%;
 	/*margin-bottom: -3%; // turn on when scrolling */
 	margin-bottom: 0;
 }}
 @media (min-width: 1025px) {
 	#_Products #specifications {
-	/*margin-top: 130vh; // turn on when scrolling */
+		/*margin-top: 130vh; // turn on when scrolling */
 		margin-top: -10%;
-	/*margin-bottom: -3%; // turn on when scrolling */
+		/*margin-bottom: -3%; // turn on when scrolling */
 		margin-bottom: 0;
+
+		/* below styles are for when scrollMagic is turned OFF */
+		position: relative;
+		top: 15%;
 	}
 }
 @media (max-width: 767px) {
@@ -2472,11 +2476,12 @@ body.skyfull
 
 	#_Products #productDescription.container-fluid.notVisible,
 	#_Products #productDescription.container-fluid {
-		visibility: hidden;
+		/*visibility: hidden; // turn on when scrolling */
 	}
 
 	#_Products #specifications {
-		margin-bottom: -3%;
+		/*margin-bottom: -3%; // turn on when scrolling */
+		margin-bottom: 0%;
 	}
 }
 
