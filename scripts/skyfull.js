@@ -246,35 +246,29 @@ $(document).ready(function() {
 				// .addIndicators({name: 'text3 - duration 25%'})
 				.addTo(magicController);
 
-		// Update Nov 16, 2015 - Jason (client) wants static text under product images
-		// // images
-		// 	var hide_products = new ScrollMagic.Scene({
-		// 		triggerElement: '.grid_trigger',
-		// 		duration: '60%'
-		// 	}).setTween(".hide_products", scrollSpeed1, {height: 0})
-		// 	// .addIndicators({name: 'reduce product height - duration 75%'})
-		// 	.addTo(magicController);
+		// images
+			var hide_products = new ScrollMagic.Scene({
+				triggerElement: '.grid_trigger',
+				duration: '60%'
+			}).setTween(".hide_products", scrollSpeed1, {height: 0})
+			// .addIndicators({name: 'reduce product height - duration 75%'})
+			.addTo(magicController);
 
-		// 	var show_grid = new ScrollMagic.Scene({
-		// 		triggerElement: '.grid_trigger',
-		// 		duration: '60%'
-		// 	}).setTween('#wf_grid', scrollSpeed2, {opacity: 1, ease: Cubic.easeOut})
-		// 	// .addIndicators({name: 'fade in grid - duration 60%'})
-		// 	.addTo(magicController);
+			var show_grid = new ScrollMagic.Scene({
+				triggerElement: '.grid_trigger',
+				duration: '60%'
+			}).setTween('#wf_grid', scrollSpeed2, {opacity: 1, ease: Cubic.easeOut})
+			// .addIndicators({name: 'fade in grid - duration 60%'})
+			.addTo(magicController);
 
-		// // fixed positions on buttons
-		// 	var fix_buttons = new ScrollMagic.Scene({
-		// 			triggerElement: '.products_trigger'
-		// 		}).setClassToggle('#productSelectContainer', 'fixed')
-		// 		// .addIndicators({name: 'fixed buttons'})
-		// 		.addTo(magicController);
+		// fixed positions on buttons
+			var fix_buttons = new ScrollMagic.Scene({
+					triggerElement: '.products_trigger'
+				}).setClassToggle('#productSelectContainer', 'fixed').setClassToggle('#productContainer', 'fixed').setClassToggle('#specifications', 'fixed')
+				// .addIndicators({name: 'fixed buttons'})
+				.addTo(magicController);
 
-		// 	var fix_images = new ScrollMagic.Scene({
-		// 			triggerElement: '.products_trigger'
-		// 		}).setClassToggle('#productContainer', 'fixed')
-		// 		// .addIndicators({name: 'fixed image container'})
-		// 		.addTo(magicController);
-
+		// Update Nov 16 2015 - Client no longer wants fade effects for text
 		// // hide about text
 		// 	var fade_description = new ScrollMagic.Scene({
 		// 		triggerElement: '.grid_trigger',
