@@ -265,7 +265,7 @@ $(document).ready(function() {
 			var fix_buttons = new ScrollMagic.Scene({
 					triggerElement: '.products_trigger'
 				}).setClassToggle('#productSelectContainer', 'fixed').setClassToggle('#productContainer', 'fixed').setClassToggle('#specifications', 'fixed')
-				// .addIndicators({name: 'fixed buttons'})
+				.addIndicators({name: 'fixing stuff'})
 				.addTo(magicController);
 
 		// Update Nov 16 2015 - Client no longer wants fade effects for text
