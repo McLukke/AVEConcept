@@ -764,6 +764,7 @@
       </div>
     </span>
 
+  </div>
   <!-- product Description -->
     <div id="description_trigger"></div>
     <div id="productDescription" class="container-fluid">
@@ -842,152 +843,151 @@
       </div>
     </div>
 
-  </div>
   <!-- Specs -->
-  <div id="specifications">
-    <div class="row">
-      <div class="hidden-xs hidden-sm col-md-1 col-lg-2"></div>
-      <div class="col-xs-12 col-sm-6 col-md-5 col-lg-4 warranty title text-left">SPECIFICATIONS</div>
-      <div class="hidden-xs col-sm-6 col-md-5 col-lg-4 warranty title text-left">WARRANTY</div>
-    </div>
-    <div class="row">
-      <div class="hidden-xs hidden-sm col-md-1 col-lg-2"></div>
-      <div class="col-xs-12 col-sm-6 col-md-5 col-lg-4">
-        <div id="description1" class="content text-left">
-          <div class="description">
-            <img class="specs_anchor blue_spec_img sm_spec_img hidden" src="/assets/specs/blue_usb.png"/>
-            <img class="specs_anchor white_spec_img sm_spec_img" src="/assets/specs/usb.png" />USB Charger
+    <div id="specifications">
+      <div class="row">
+        <div class="hidden-xs hidden-sm col-md-1 col-lg-2"></div>
+        <div class="col-xs-12 col-sm-6 col-md-5 col-lg-4 warranty title text-left">SPECIFICATIONS</div>
+        <div class="hidden-xs col-sm-6 col-md-5 col-lg-4 warranty title text-left">WARRANTY</div>
+      </div>
+      <div class="row">
+        <div class="hidden-xs hidden-sm col-md-1 col-lg-2"></div>
+        <div class="col-xs-12 col-sm-6 col-md-5 col-lg-4">
+          <div id="description1" class="content text-left">
+            <div class="description">
+              <img class="specs_anchor blue_spec_img sm_spec_img hidden" src="/assets/specs/blue_usb.png"/>
+              <img class="specs_anchor white_spec_img sm_spec_img" src="/assets/specs/usb.png" />USB Charger
+            </div>
+            <div class="description">
+              <img class="specs_anchor blue_spec_img lg_spec_img hidden" src="/assets/specs/blue_medical.png"/>
+              <img class="specs_anchor white_spec_img lg_spec_img" src="/assets/specs/medical.png" />Medical Grade Silicone
+            </div>
+            <div class="description">
+              <img class="specs_anchor insertable blue_length blue_spec_img sm_spec_img hidden" src="/assets/specs/blue_length.png"/>
+              <img class="specs_anchor insertable white_spec_img sm_spec_img" src="/assets/specs/length.png" /><p class="content long_text">Insertable Length: 110mm / 4.3 inches</p>
+            </div>
+            <div class="description">
+              <img class="specs_anchor blue_spec_img sm_spec_img hidden" src="/assets/specs/blue_vibration.png"/>
+              <img class="specs_anchor white_spec_img sm_spec_img" src="/assets/specs/vibration.png" />7 quiet vibration modes
+            </div>
+            <div class="description">
+              <img class="specs_anchor blue_spec_img lg_spec_img hidden" src="/assets/specs/blue_waterproof.png"/>
+              <img class="specs_anchor white_spec_img lg_spec_img" src="/assets/specs/waterproof.png" />Waterproof
+            </div>
           </div>
-          <div class="description">
-            <img class="specs_anchor blue_spec_img lg_spec_img hidden" src="/assets/specs/blue_medical.png"/>
-            <img class="specs_anchor white_spec_img lg_spec_img" src="/assets/specs/medical.png" />Medical Grade Silicone
+          <div id="description2" class="content text-left">
+            <div class="description hidden">
+              <img class="specs_anchor sm_spec_img blue_spec_img hidden" src="/assets/specs/blue_usb.png"/>
+              <img class="specs_anchor white_spec_img sm_spec_img" src="/assets/specs/usb.png" />USB Charger
+            </div>
+            <div class="description hidden">
+              <img class="specs_anchor lg_spec_img blue_spec_img hidden" src="/assets/specs/blue_medical.png"/>
+              <img class="specs_anchor white_spec_img lg_spec_img" src="/assets/specs/medical.png" />Medical Grade Silicone
+            </div>
+            <div class="description hidden">
+              <img class="specs_anchor insertable sm_spec_img blue_length blue_spec_img hidden" src="/assets/specs/blue_length.png"/>
+              <img class="specs_anchor insertable white_spec_img sm_spec_img" src="/assets/specs/length.png" /><p class="content long_text">Insertable Length: 94mm / 3.7 inches</p>
+            </div>
+            <div class="description hidden">
+              <img class="specs_anchor sm_spec_img blue_spec_img hidden" src="/assets/specs/blue_vibration.png"/>
+              <img class="specs_anchor white_spec_img sm_spec_img" src="/assets/specs/vibration.png" />7 quiet vibration modes
+            </div>
+            <div class="description hidden">
+              <img class="specs_anchor lg_spec_img blue_spec_img hidden" src="/assets/specs/blue_waterproof.png"/>
+              <img class="specs_anchor white_spec_img lg_spec_img" src="/assets/specs/waterproof.png" />Waterproof
+            </div>
           </div>
-          <div class="description">
-            <img class="specs_anchor insertable blue_length blue_spec_img sm_spec_img hidden" src="/assets/specs/blue_length.png"/>
-            <img class="specs_anchor insertable white_spec_img sm_spec_img" src="/assets/specs/length.png" /><p class="content long_text">Insertable Length: 110mm / 4.3 inches</p>
+          <div id="description3" class="content text-left">
+            <div class="description hidden">
+              <img class="specs_anchor sm_spec_img blue_spec_img hidden" src="/assets/specs/blue_usb.png"/>
+              <img class="specs_anchor white_spec_img sm_spec_img" src="/assets/specs/usb.png" />USB Charger
+            </div>
+            <div class="description hidden">
+              <img class="specs_anchor lg_spec_img blue_spec_img hidden" src="/assets/specs/blue_medical.png"/>
+              <img class="specs_anchor white_spec_img lg_spec_img" src="/assets/specs/medical.png" />Medical Grade Silicone
+            </div>
+            <div class="description hidden">
+              <img class="specs_anchor insertable sm_spec_img blue_length blue_spec_img hidden" src="/assets/specs/blue_length.png"/>
+              <img class="specs_anchor insertable white_spec_img sm_spec_img" src="/assets/specs/length.png" /><p class="content long_text">Insertable Length: 110mm / 4.3 inches</p>
+            </div>
+            <div class="description hidden">
+              <img class="specs_anchor sm_spec_img blue_spec_img hidden" src="/assets/specs/blue_vibration.png"/>
+              <img class="specs_anchor white_spec_img sm_spec_img" src="/assets/specs/vibration.png" />7 quiet vibration modes
+            </div>
+            <div class="description hidden">
+              <img class="specs_anchor lg_spec_img blue_spec_img hidden" src="/assets/specs/blue_waterproof.png"/>
+              <img class="specs_anchor white_spec_img lg_spec_img" src="/assets/specs/waterproof.png" />Waterproof
+            </div>
           </div>
-          <div class="description">
-            <img class="specs_anchor blue_spec_img sm_spec_img hidden" src="/assets/specs/blue_vibration.png"/>
-            <img class="specs_anchor white_spec_img sm_spec_img" src="/assets/specs/vibration.png" />7 quiet vibration modes
+          <div id="description4" class="content text-left">
+            <div class="description hidden">
+              <img class="specs_anchor sm_spec_img blue_spec_img hidden" src="/assets/specs/blue_usb.png"/>
+              <img class="specs_anchor white_spec_img sm_spec_img" src="/assets/specs/usb.png" />USB Charger
+            </div>
+            <div class="description hidden">
+              <img class="specs_anchor lg_spec_img blue_spec_img hidden" src="/assets/specs/blue_medical.png"/>
+              <img class="specs_anchor white_spec_img lg_spec_img" src="/assets/specs/medical.png" />Medical Grade Silicone
+            </div>
+            <div class="description hidden">
+              <img class="specs_anchor insertable sm_spec_img blue_length blue_spec_img hidden" src="/assets/specs/blue_length.png"/>
+              <img class="specs_anchor insertable white_spec_img sm_spec_img" src="/assets/specs/length.png" /><p class="content long_text">Insertable Length: 94mm / 3.7 inches</p>
+            </div>
+            <div class="description hidden">
+              <img class="specs_anchor sm_spec_img blue_spec_img hidden" src="/assets/specs/blue_vibration.png"/>
+              <img class="specs_anchor white_spec_img sm_spec_img" src="/assets/specs/vibration.png" />7 quiet vibration modes
+            </div>
+            <div class="description hidden">
+              <img class="specs_anchor lg_spec_img blue_spec_img hidden" src="/assets/specs/blue_waterproof.png"/>
+              <img class="specs_anchor white_spec_img lg_spec_img" src="/assets/specs/waterproof.png" />Waterproof
+            </div>
           </div>
-          <div class="description">
-            <img class="specs_anchor blue_spec_img lg_spec_img hidden" src="/assets/specs/blue_waterproof.png"/>
-            <img class="specs_anchor white_spec_img lg_spec_img" src="/assets/specs/waterproof.png" />Waterproof
+          <div id="description5" class="content text-left">
+            <div class="description hidden">
+              <img class="specs_anchor sm_spec_img blue_spec_img hidden" src="/assets/specs/blue_usb.png"/>
+              <img class="specs_anchor white_spec_img sm_spec_img" src="/assets/specs/usb.png" />USB Charger
+            </div>
+            <div class="description hidden">
+              <img class="specs_anchor lg_spec_img blue_spec_img hidden" src="/assets/specs/blue_medical.png"/>
+              <img class="specs_anchor white_spec_img lg_spec_img" src="/assets/specs/medical.png" />Medical Grade Silicone
+            </div>
+            <div class="description hidden">
+              <img class="specs_anchor insertable sm_spec_img blue_length blue_spec_img hidden" src="/assets/specs/blue_length.png"/>
+              <img class="specs_anchor insertable white_spec_img sm_spec_img" src="/assets/specs/length.png" /><p class="content long_text">Insertable Length:
+                 82mm / 3.2 inches</p>
+            </div>
+            <div class="description hidden">
+              <img class="specs_anchor sm_spec_img blue_spec_img hidden" src="/assets/specs/blue_vibration.png"/>
+              <img class="specs_anchor white_spec_img sm_spec_img" src="/assets/specs/vibration.png" />7 quiet vibration modes
+            </div>
+            <div class="description hidden">
+              <img class="specs_anchor lg_spec_img blue_spec_img hidden" src="/assets/specs/blue_waterproof.png"/>
+              <img class="specs_anchor white_spec_img lg_spec_img" src="/assets/specs/waterproof.png" />Waterproof
+            </div>
+          </div>
+          <div id="description6" class="content text-left">
+            <div class="description hidden">
+              <img class="specs_anchor lg_spec_img blue_spec_img hidden" src="/assets/specs/blue_medical.png"/>
+              <img class="specs_anchor white_spec_img lg_spec_img" src="/assets/specs/medical.png" />Medical Grade Silicone
+            </div>
+            <div class="description hidden">
+              <img class="specs_anchor insertable sm_spec_img blue_length blue_spec_img hidden" src="/assets/specs/blue_length.png"/>
+              <img class="specs_anchor insertable white_spec_img sm_spec_img" src="/assets/specs/length.png" /><p class="content long_text">Insertable Length: 100mm / 3.9 inches</p>
+            </div>
           </div>
         </div>
-        <div id="description2" class="content text-left">
-          <div class="description hidden">
-            <img class="specs_anchor sm_spec_img blue_spec_img hidden" src="/assets/specs/blue_usb.png"/>
-            <img class="specs_anchor white_spec_img sm_spec_img" src="/assets/specs/usb.png" />USB Charger
-          </div>
-          <div class="description hidden">
-            <img class="specs_anchor lg_spec_img blue_spec_img hidden" src="/assets/specs/blue_medical.png"/>
-            <img class="specs_anchor white_spec_img lg_spec_img" src="/assets/specs/medical.png" />Medical Grade Silicone
-          </div>
-          <div class="description hidden">
-            <img class="specs_anchor insertable sm_spec_img blue_length blue_spec_img hidden" src="/assets/specs/blue_length.png"/>
-            <img class="specs_anchor insertable white_spec_img sm_spec_img" src="/assets/specs/length.png" /><p class="content long_text">Insertable Length: 94mm / 3.7 inches</p>
-          </div>
-          <div class="description hidden">
-            <img class="specs_anchor sm_spec_img blue_spec_img hidden" src="/assets/specs/blue_vibration.png"/>
-            <img class="specs_anchor white_spec_img sm_spec_img" src="/assets/specs/vibration.png" />7 quiet vibration modes
-          </div>
-          <div class="description hidden">
-            <img class="specs_anchor lg_spec_img blue_spec_img hidden" src="/assets/specs/blue_waterproof.png"/>
-            <img class="specs_anchor white_spec_img lg_spec_img" src="/assets/specs/waterproof.png" />Waterproof
-          </div>
-        </div>
-        <div id="description3" class="content text-left">
-          <div class="description hidden">
-            <img class="specs_anchor sm_spec_img blue_spec_img hidden" src="/assets/specs/blue_usb.png"/>
-            <img class="specs_anchor white_spec_img sm_spec_img" src="/assets/specs/usb.png" />USB Charger
-          </div>
-          <div class="description hidden">
-            <img class="specs_anchor lg_spec_img blue_spec_img hidden" src="/assets/specs/blue_medical.png"/>
-            <img class="specs_anchor white_spec_img lg_spec_img" src="/assets/specs/medical.png" />Medical Grade Silicone
-          </div>
-          <div class="description hidden">
-            <img class="specs_anchor insertable sm_spec_img blue_length blue_spec_img hidden" src="/assets/specs/blue_length.png"/>
-            <img class="specs_anchor insertable white_spec_img sm_spec_img" src="/assets/specs/length.png" /><p class="content long_text">Insertable Length: 110mm / 4.3 inches</p>
-          </div>
-          <div class="description hidden">
-            <img class="specs_anchor sm_spec_img blue_spec_img hidden" src="/assets/specs/blue_vibration.png"/>
-            <img class="specs_anchor white_spec_img sm_spec_img" src="/assets/specs/vibration.png" />7 quiet vibration modes
-          </div>
-          <div class="description hidden">
-            <img class="specs_anchor lg_spec_img blue_spec_img hidden" src="/assets/specs/blue_waterproof.png"/>
-            <img class="specs_anchor white_spec_img lg_spec_img" src="/assets/specs/waterproof.png" />Waterproof
-          </div>
-        </div>
-        <div id="description4" class="content text-left">
-          <div class="description hidden">
-            <img class="specs_anchor sm_spec_img blue_spec_img hidden" src="/assets/specs/blue_usb.png"/>
-            <img class="specs_anchor white_spec_img sm_spec_img" src="/assets/specs/usb.png" />USB Charger
-          </div>
-          <div class="description hidden">
-            <img class="specs_anchor lg_spec_img blue_spec_img hidden" src="/assets/specs/blue_medical.png"/>
-            <img class="specs_anchor white_spec_img lg_spec_img" src="/assets/specs/medical.png" />Medical Grade Silicone
-          </div>
-          <div class="description hidden">
-            <img class="specs_anchor insertable sm_spec_img blue_length blue_spec_img hidden" src="/assets/specs/blue_length.png"/>
-            <img class="specs_anchor insertable white_spec_img sm_spec_img" src="/assets/specs/length.png" /><p class="content long_text">Insertable Length: 94mm / 3.7 inches</p>
-          </div>
-          <div class="description hidden">
-            <img class="specs_anchor sm_spec_img blue_spec_img hidden" src="/assets/specs/blue_vibration.png"/>
-            <img class="specs_anchor white_spec_img sm_spec_img" src="/assets/specs/vibration.png" />7 quiet vibration modes
-          </div>
-          <div class="description hidden">
-            <img class="specs_anchor lg_spec_img blue_spec_img hidden" src="/assets/specs/blue_waterproof.png"/>
-            <img class="specs_anchor white_spec_img lg_spec_img" src="/assets/specs/waterproof.png" />Waterproof
-          </div>
-        </div>
-        <div id="description5" class="content text-left">
-          <div class="description hidden">
-            <img class="specs_anchor sm_spec_img blue_spec_img hidden" src="/assets/specs/blue_usb.png"/>
-            <img class="specs_anchor white_spec_img sm_spec_img" src="/assets/specs/usb.png" />USB Charger
-          </div>
-          <div class="description hidden">
-            <img class="specs_anchor lg_spec_img blue_spec_img hidden" src="/assets/specs/blue_medical.png"/>
-            <img class="specs_anchor white_spec_img lg_spec_img" src="/assets/specs/medical.png" />Medical Grade Silicone
-          </div>
-          <div class="description hidden">
-            <img class="specs_anchor insertable sm_spec_img blue_length blue_spec_img hidden" src="/assets/specs/blue_length.png"/>
-            <img class="specs_anchor insertable white_spec_img sm_spec_img" src="/assets/specs/length.png" /><p class="content long_text">Insertable Length:
-               82mm / 3.2 inches</p>
-          </div>
-          <div class="description hidden">
-            <img class="specs_anchor sm_spec_img blue_spec_img hidden" src="/assets/specs/blue_vibration.png"/>
-            <img class="specs_anchor white_spec_img sm_spec_img" src="/assets/specs/vibration.png" />7 quiet vibration modes
-          </div>
-          <div class="description hidden">
-            <img class="specs_anchor lg_spec_img blue_spec_img hidden" src="/assets/specs/blue_waterproof.png"/>
-            <img class="specs_anchor white_spec_img lg_spec_img" src="/assets/specs/waterproof.png" />Waterproof
-          </div>
-        </div>
-        <div id="description6" class="content text-left">
-          <div class="description hidden">
-            <img class="specs_anchor lg_spec_img blue_spec_img hidden" src="/assets/specs/blue_medical.png"/>
-            <img class="specs_anchor white_spec_img lg_spec_img" src="/assets/specs/medical.png" />Medical Grade Silicone
-          </div>
-          <div class="description hidden">
-            <img class="specs_anchor insertable sm_spec_img blue_length blue_spec_img hidden" src="/assets/specs/blue_length.png"/>
-            <img class="specs_anchor insertable white_spec_img sm_spec_img" src="/assets/specs/length.png" /><p class="content long_text">Insertable Length: 100mm / 3.9 inches</p>
-          </div>
-        </div>
+
+        <!-- <div class="midspec_margin hidden-xs col-sm-4 col-md-3 col-lg-3 content text-left"></div> -->
+
+        <div class="hidden-xs col-sm-6 col-md-5 col-lg-4 content text-left">AVE warrants this product for 3 years from the date of purchase against defects and / or faulty workmanship.</div>
       </div>
 
-      <!-- <div class="midspec_margin hidden-xs col-sm-4 col-md-3 col-lg-3 content text-left"></div> -->
-
-      <div class="hidden-xs col-sm-6 col-md-5 col-lg-4 content text-left">AVE warrants this product for 3 years from the date of purchase against defects and / or faulty workmanship.</div>
+      <div class="row">
+        <div class="col-xs-12 hidden-sm hidden-md hidden-lg warranty title text-left">WARRANTY</div>
+      </div>
+      <div class="row">
+        <div class="col-xs-12 hidden-sm hidden-md hidden-lg content text-left">AVE warrants this product for 3 years from the date of purchase against defects and / or faulty workmanship.</div>
+      </div>
     </div>
-
-    <div class="row">
-      <div class="col-xs-12 hidden-sm hidden-md hidden-lg warranty title text-left">WARRANTY</div>
-    </div>
-    <div class="row">
-      <div class="col-xs-12 hidden-sm hidden-md hidden-lg content text-left">AVE warrants this product for 3 years from the date of purchase against defects and / or faulty workmanship.</div>
-    </div>
-  </div>
 
 </div>
 </div>

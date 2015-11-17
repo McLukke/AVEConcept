@@ -261,26 +261,28 @@ $(document).ready(function() {
 			// .addIndicators({name: 'fade in grid - duration 60%'})
 			.addTo(magicController);
 
-		// fixed positions on buttons
-			var fix_buttons = new ScrollMagic.Scene({
-					triggerElement: '.products_trigger'
-				}).setClassToggle('#productSelectContainer', 'fixed')
-				// .addIndicators({name: 'fixed buttons'})
-				.addTo(magicController);
+		// Update Nov 16 2015 - no more position:fixed
+		// // fixed positions on buttons
+		// 	var fix_buttons = new ScrollMagic.Scene({
+		// 			triggerElement: '.products_trigger'
+		// 		}).setClassToggle('#productSelectContainer', 'fixed')
+		// 		// .addIndicators({name: 'fixed buttons'})
+		// 		.addTo(magicController);
 
-			var fix_images = new ScrollMagic.Scene({
-					triggerElement: '.products_trigger'
-				}).setClassToggle('#productContainer', 'fixed')
-				// .addIndicators({name: 'fixed image container'})
-				.addTo(magicController);
+		// 	var fix_images = new ScrollMagic.Scene({
+		// 			triggerElement: '.products_trigger'
+		// 		}).setClassToggle('#productContainer', 'fixed')
+		// 		// .addIndicators({name: 'fixed image container'})
+		// 		.addTo(magicController);
 
-		// hide about text
-			var fade_description = new ScrollMagic.Scene({
-				triggerElement: '.grid_trigger',
-				duration: '70%'
-			}).setClassToggle('#productDescription', 'notVisible')
-			// .addIndicators({name: 'fade about text - duration 70%'})
-			.addTo(magicController);
+		// Update Nov 16 2015 - no more fading
+		// // hide about text
+		// 	var fade_description = new ScrollMagic.Scene({
+		// 		triggerElement: '.grid_trigger',
+		// 		duration: '70%'
+		// 	}).setClassToggle('#productDescription', 'notVisible')
+		// 	// .addIndicators({name: 'fade about text - duration 70%'})
+		// 	.addTo(magicController);
 
 		// scroll specs 'up'
 			var scroll_specs = new ScrollMagic.Scene({
