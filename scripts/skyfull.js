@@ -264,8 +264,20 @@ $(document).ready(function() {
 		// fixed positions on buttons
 			var fix_buttons = new ScrollMagic.Scene({
 					triggerElement: '.products_trigger'
-				}).setClassToggle('#productSelectContainer', 'fixed').setClassToggle('#productContainer', 'fixed').setClassToggle('#specifications', 'fixed')
-				.addIndicators({name: 'fixing stuff'})
+				}).setClassToggle('#productSelectContainer', 'fixed')
+				// .addIndicators({name: 'fixed buttons'})
+				.addTo(magicController);
+
+			var fix_images = new ScrollMagic.Scene({
+					triggerElement: '.products_trigger'
+				}).setClassToggle('#productContainer', 'fixed')
+				// .addIndicators({name: 'fixed image container'})
+				.addTo(magicController);
+
+			var fix_text = new ScrollMagic.Scene({
+				triggerElement: '.products_trigger'
+				}).setClassToggle('#specifications', 'fixed')
+				// .addIndicators({name: 'fixed image container'})
 				.addTo(magicController);
 
 		// Update Nov 16 2015 - Client no longer wants fade effects for text
