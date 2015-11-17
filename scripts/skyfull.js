@@ -250,14 +250,14 @@ $(document).ready(function() {
 			var hide_products = new ScrollMagic.Scene({
 				triggerElement: '.grid_trigger',
 				duration: '25%'
-			}).setTween(".hide_products", scrollSpeed2, {height: 0})
+			}).setTween(".hide_products", 1.0, {height: 0})
 			.addIndicators({name: 'reduce product height - duration 25%'})
 			.addTo(magicController);
 
 			var show_grid = new ScrollMagic.Scene({
 				triggerElement: '.grid_trigger',
 				duration: '25%'
-			}).setTween('#wf_grid', scrollSpeed2, {opacity: 1, ease: Cubic.easeOut})
+			}).setTween('#wf_grid', 1.0, {opacity: 1, ease: Cubic.easeOut})
 			// .addIndicators({name: 'fade in grid - duration 60%'})
 			.addTo(magicController);
 
