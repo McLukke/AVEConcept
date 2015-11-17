@@ -2427,19 +2427,27 @@ body.skyfull
 		font-size: 15px;
 	}
 }
+@media (min-width: 768px) {
+	.about_product p {
+		font-size: 18px;
+		color: #b1b1b1;
+	}
+}
 
 @media (min-width: 768px) and (max-height: 950px) {
 	#_Products .title {
 		font-size: 21px;
 	}
 
-	#_Products .content {
+	#_Products .content,
+	.about_product p {
 		font-size: 14px;
 	}
 
 	#_Products .product_title_gap {
 		margin-top: 0;
 	}
+
 }
 
 @media (min-width: 768px) and (max-height: 650px) {
@@ -2447,7 +2455,8 @@ body.skyfull
 		font-size: 14px;
 	}
 
-	#_Products .content {
+	#_Products .content,
+	.about_product p {
 		font-size: 9px;
 	}
 
@@ -2511,13 +2520,6 @@ body.skyfull
 
 .hidden_specs {
 	display: none;
-}
-
-@media (min-width: 768px) {
-	.about_product p {
-		font-size: 18px;
-		color: #b1b1b1;
-	}
 }
 
 } //body
