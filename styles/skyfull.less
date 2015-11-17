@@ -1462,10 +1462,14 @@ body.skyfull
 
 	#_Products #productDescription.container-fluid {
 		position: relative;
-		margin-top: 45vh;
-		margin-bottom: 5vh;
+		margin-top: 0;
+		margin-bottom: 0;
 		/*margin-top: 20px;*/
 		/*margin-bottom: 30px;*/
+		@media (min-width: 768px) {
+			margin-top: 45vh;
+			margin-bottom: 5vh;
+		}
 	}
 
 	.specs_title {
@@ -2532,8 +2536,8 @@ body.skyfull
 	}
 
 	#_Products #productDescription.container-fluid {
-		margin-top: 20vh;
-		margin-bottom: 20vh;
+		margin-top: 45vh;
+		margin-bottom: 5vh;
 	}
 }
 
