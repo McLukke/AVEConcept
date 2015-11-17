@@ -274,11 +274,11 @@ $(document).ready(function() {
 				// .addIndicators({name: 'fixed image container'})
 				.addTo(magicController);
 
-			var fix_text = new ScrollMagic.Scene({
-				triggerElement: '.products_trigger'
-				}).setClassToggle('#specifications', 'fixed')
-				// .addIndicators({name: 'fixed image container'})
-				.addTo(magicController);
+			// var fix_text = new ScrollMagic.Scene({
+			// 	triggerElement: '.products_trigger'
+			// 	}).setClassToggle('#specifications', 'fixed')
+			// 	// .addIndicators({name: 'fixed image container'})
+			// 	.addTo(magicController);
 
 		// Update Nov 16 2015 - Client no longer wants fade effects for text
 		// // hide about text
