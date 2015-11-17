@@ -985,7 +985,7 @@
         <div class="col-xs-12 hidden-sm hidden-md hidden-lg warranty title text-left">WARRANTY</div>
       </div>
       <div class="row">
-        <div class="col-xs-12 hidden-sm hidden-md hidden-lg content text-left">AVE warrants this product for 3 years from the date of purchase against defects and / or faulty workmanship.</div>
+        <p class="col-xs-12 hidden-sm hidden-md hidden-lg text-left">AVE warrants this product for 3 years from the date of purchase against defects and / or faulty workmanship.</p>
       </div>
     </div>
 
