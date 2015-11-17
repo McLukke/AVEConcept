@@ -274,28 +274,21 @@ $(document).ready(function() {
 				// .addIndicators({name: 'fixed image container'})
 				.addTo(magicController);
 
-			// var fix_text = new ScrollMagic.Scene({
-			// 	triggerElement: '.products_trigger'
-			// 	}).setClassToggle('#specifications', 'fixed')
-			// 	// .addIndicators({name: 'fixed image container'})
-			// 	.addTo(magicController);
+		// hide about text
+			var fade_description = new ScrollMagic.Scene({
+				triggerElement: '.grid_trigger',
+				duration: '70%'
+			}).setClassToggle('#productDescription', 'notVisible')
+			// .addIndicators({name: 'fade about text - duration 70%'})
+			.addTo(magicController);
 
-		// Update Nov 16 2015 - Client no longer wants fade effects for text
-		// // hide about text
-		// 	var fade_description = new ScrollMagic.Scene({
-		// 		triggerElement: '.grid_trigger',
-		// 		duration: '70%'
-		// 	}).setClassToggle('#productDescription', 'notVisible')
-		// 	// .addIndicators({name: 'fade about text - duration 70%'})
-		// 	.addTo(magicController);
-
-		// // scroll specs 'up'
-		// 	var scroll_specs = new ScrollMagic.Scene({
-		// 			triggerElement: '.grid_trigger',
-		// 			duration: '20%'
-		// 		}).setTween("#specifications", scrollSpeed2, {paddingBottom: '5%'})
-		// 		// .addIndicators({name: 'show Specs - duration 20%'})
-		// 		.addTo(magicController);
+		// scroll specs 'up'
+			var scroll_specs = new ScrollMagic.Scene({
+					triggerElement: '.grid_trigger',
+					duration: '20%'
+				}).setTween("#specifications", scrollSpeed2, {paddingBottom: '5%'})
+				// .addIndicators({name: 'show Specs - duration 20%'})
+				.addTo(magicController);
 	}
 
 	$(window).resize( function () {
