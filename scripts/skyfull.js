@@ -251,7 +251,7 @@ $(document).ready(function() {
 				triggerElement: '.grid_trigger',
 				duration: '60%'
 			}).setTween(".hide_products", scrollSpeed1, {height: 0})
-			// .addIndicators({name: 'reduce product height - duration 75%'})
+			.addIndicators({name: 'reduce product height - duration 75%'})
 			.addTo(magicController);
 
 			var show_grid = new ScrollMagic.Scene({
