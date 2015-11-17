@@ -763,7 +763,8 @@
         </div>
       </div>
     </span>
-  
+
+  </div>
   <!-- product Description -->
     <div id="description_trigger"></div>
     <div id="productDescription" class="container-fluid">
@@ -841,7 +842,6 @@
         </div>
       </div>
     </div>
-  </div>
 
   <!-- Specs -->
   <div id="specifications">
