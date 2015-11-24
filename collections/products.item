@@ -203,6 +203,8 @@
    		jQuery(this).toggleClass('active');
 	});
 
+	jQuery('input[type="radio"]:eq(0)').attr('checked', 'checked');
+
     </script>
 
 
