@@ -22,7 +22,7 @@
 
 	<!-- Swiper Mobile -->
 
-	<div class="swiper-container">
+	<div id="mobile-swiper" class="swiper-container">
         <div class="swiper-wrapper">
         	{.repeated section items}
 				{.image?}
