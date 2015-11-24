@@ -198,6 +198,10 @@
         paginationClickable: true
     });
 
+    jQuery('.desktop-preview-small .product_item.img-responsive').click(function(){
+   		jQuery(this).toggleClass('active');
+	});
+
     </script>
 
 
