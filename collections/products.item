@@ -22,7 +22,7 @@
 
 	<!-- Swiper Mobile -->
 
-	<!-- <div class="swiper-container">
+	<div class="swiper-container">
         <div class="swiper-wrapper">
         	{.repeated section items}
 				{.image?}
@@ -33,13 +33,13 @@
 			{.end}
         </div>
          <div class="swiper-pagination"></div>
-    </div> -->
+    </div>
 
 
 
 	<!-- Swiper Desktop-->
 
-    <div class="swiper-container gallery-top">
+    <!-- <div class="swiper-container gallery-top">
         
         <div class="swiper-wrapper">
         	{.repeated section items}
@@ -49,9 +49,9 @@
 		            </div>
 		    	{.end}
 			{.end}
-        </div>
+        </div> -->
          <!-- <div class="swiper-pagination"></div> -->
-    </div>
+    <!-- </div>
     <div class="swiper-container gallery-thumbs">
         <div class="swiper-wrapper">
         	{.repeated section items}
@@ -62,7 +62,9 @@
 		        {.end}
 			{.end}
         </div>
-    </div>
+    </div> -->
+
+
 
 
 	<!-- SWIPER-->
@@ -89,7 +91,7 @@
 
 	<!-- Desktop Viewer -->
 
-		<!-- <div class="shop-viewer">
+		<div class="shop-viewer">
 
 			<ul class="slides-desktop">
 
@@ -112,7 +114,7 @@
 			    	{.end}
 			    </li>
 			</ul>
-		</div> -->
+		</div>
 
 <!-- end of desktop slider -->
 
@@ -120,7 +122,7 @@
 <!-- After testing -->
 
 
-	      <!-- {.repeated section items}
+	      {.repeated section items}
 	        {.image?}
 	        	<div class="desktop-preview-small col-xs-3">
 		        	<label for="{urlId}">
@@ -130,9 +132,11 @@
 	          		</label>
 	          	</div>
 	        {.end}
-	      {.end} -->
+	      {.end}
 
-		</div>
+
+
+		</div> <!-- end col-8 -->
 
 	    <!-- This shows the status (sold out/on sale), price, and description (excerpt) text -->
 	    <div class="col-sm-4">
@@ -174,25 +178,25 @@
 <!-- Initialize Swiper -->
     <script>
 
-    var galleryTop = new Swiper('.gallery-top', {
-        nextButton: '.swiper-button-next',
-        prevButton: '.swiper-button-prev',
-        spaceBetween: 10,
-    });
-    var galleryThumbs = new Swiper('.gallery-thumbs', {
-        spaceBetween: 10,
-        centeredSlides: true,
-        slidesPerView: 'auto',
-        touchRatio: 0.2,
-        slideToClickedSlide: true
-    });
-    galleryTop.params.control = galleryThumbs;
-    galleryThumbs.params.control = galleryTop;
-
-    // var swiper = new Swiper('.swiper-container', {
-    //     pagination: '.swiper-pagination',
-    //     paginationClickable: true
+    // var galleryTop = new Swiper('.gallery-top', {
+    //     nextButton: '.swiper-button-next',
+    //     prevButton: '.swiper-button-prev',
+    //     spaceBetween: 10,
     // });
+    // var galleryThumbs = new Swiper('.gallery-thumbs', {
+    //     spaceBetween: 10,
+    //     centeredSlides: true,
+    //     slidesPerView: 'auto',
+    //     touchRatio: 0.2,
+    //     slideToClickedSlide: true
+    // });
+    // galleryTop.params.control = galleryThumbs;
+    // galleryThumbs.params.control = galleryTop;
+
+    var swiper = new Swiper('.swiper-container', {
+        pagination: '.swiper-pagination',
+        paginationClickable: true
+    });
 
     </script>
 
