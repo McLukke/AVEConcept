@@ -97,7 +97,7 @@
 
 				{.repeated section items}
 					{.image?}
-						<input type="radio" name="radio-btn" class="img-slide-desktop" id="{urlId}" checked />
+						<input type="radio" name="radio-btn" class="img-slide-desktop" id="{urlId}" />
 					    	<li class="slide-container-desktop">
 							<div class="slide-desktop col-xs-12">
 						          <img  class="product_item img-responsive" {@|image-meta} />
@@ -199,6 +199,7 @@
     });
 
     jQuery('.desktop-preview-small .product_item.img-responsive').click(function(){
+   		jQuery('.active').removeClass('active');
    		jQuery(this).toggleClass('active');
 	});
 
