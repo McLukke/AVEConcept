@@ -202,7 +202,8 @@
    		jQuery('.active').removeClass('active');
    		jQuery(this).toggleClass('active');
 	});
-
+	
+    jQuery('.desktop-preview-small .product_item.img-responsive:eq(0)').addClass('active');
 	jQuery('input[type="radio"]:eq(0)').attr('checked', 'checked');
 
     </script>
