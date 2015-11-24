@@ -91,6 +91,16 @@ Y.use('node', 'squarespace-ui-base', function() {
         $('body').addClass('journal-category');
       }
 
+      // Add class into body
+      if (document.location.pathname.indexOf("products") > -1) {
+        $('body').addClass('products-hack');
+      }
+
+      // Add class into body
+      if (document.location.pathname.indexOf("show-cart") > -1) {
+        $('body').addClass('showcart-hack');
+      }
+
       //Search for "All"
       if (document.location.search.indexOf("Press") > -1) {
         jQuery('#big-block').addClass('main-image-small').removeClass('main-image-big');

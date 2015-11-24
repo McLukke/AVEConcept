@@ -1,0 +1,205 @@
+{.section item}
+  <div id="productWrapper">
+    
+    <div>
+		<h1>
+			<a id="backtoshop" class="back-link" href="https://william-li-zrps.squarespace.com/products"><img class="back-arrow" src="/assets/back-arrow.png" /> Back to shop </a>
+		</h1>
+	</div>
+
+    <!-- This displays all images/videos associated with the product. Style this accordingly. -->
+    
+    <div class="item-mobile-header">
+    	<h1 class="product-title">{title}</h1>
+		      {@|product-price}
+    </div>
+
+
+    <!-- this is for the structure -->
+    <div id="product_item_header" class="row">
+	    <div class="col-sm-8">
+
+
+	<!-- Swiper Mobile -->
+
+	<!-- <div class="swiper-container">
+        <div class="swiper-wrapper">
+        	{.repeated section items}
+				{.image?}
+		            <div class="swiper-slide"> 
+		            	<img  class="product_item img-responsive" {@|image-meta} />
+		            </div>
+		    	{.end}
+			{.end}
+        </div>
+         <div class="swiper-pagination"></div>
+    </div> -->
+
+
+
+	<!-- Swiper Desktop-->
+
+    <div class="swiper-container gallery-top">
+        
+        <div class="swiper-wrapper">
+        	{.repeated section items}
+				{.image?}
+		            <div class="swiper-slide"> 
+		            	<img  class="product_item img-responsive" {@|image-meta} />
+		            </div>
+		    	{.end}
+			{.end}
+        </div>
+         <!-- <div class="swiper-pagination"></div> -->
+    </div>
+    <div class="swiper-container gallery-thumbs">
+        <div class="swiper-wrapper">
+        	{.repeated section items}
+				{.image?}
+		            <div class="swiper-slide">
+		         		<img  class="product_item img-responsive" {@|image-meta} />
+		            </div>
+		        {.end}
+			{.end}
+        </div>
+    </div>
+
+
+	<!-- SWIPER-->
+
+		<!-- <div class="swiper-container">
+		    <div class="swiper-wrapper">
+		        
+		        {.repeated section items}
+					{.image?}
+						<div class="swiper-slide">
+							<input type="radio" name="radio-btn" class="img-slide-desktop" id="{urlId}" checked />
+							   <img  class="product_item img-responsive" {@|image-meta} />
+						</div>	   
+				    {.end}
+			    {.end}
+		      
+		    </div>
+		    
+		    <div class="swiper-pagination"></div>
+		</div> -->
+
+	<!-- Swiper ends -->
+
+
+	<!-- Desktop Viewer -->
+
+		<!-- <div class="shop-viewer">
+
+			<ul class="slides-desktop">
+
+				{.repeated section items}
+					{.image?}
+						<input type="radio" name="radio-btn" class="img-slide-desktop" id="{urlId}" checked />
+					    	<li class="slide-container-desktop">
+							<div class="slide-desktop col-xs-12">
+						          <img  class="product_item img-responsive" {@|image-meta} />
+						    </div>
+					    </li>
+				    {.end}
+			    {.end}
+
+			    <li class="nav-dots-desktop">
+			    	{.repeated section items}
+			    		{.image?}
+			    		<label for="{urlId}" class="nav-dot-desktop"></label>
+			    		{.end}
+			    	{.end}
+			    </li>
+			</ul>
+		</div> -->
+
+<!-- end of desktop slider -->
+
+
+<!-- After testing -->
+
+
+	      <!-- {.repeated section items}
+	        {.image?}
+	        	<div class="desktop-preview-small col-xs-3">
+		        	<label for="{urlId}">
+				    	<div>
+	          				<img class="product_item img-responsive" {@|image-meta} />
+	          			</div>
+	          		</label>
+	          	</div>
+	        {.end}
+	      {.end} -->
+
+		</div>
+
+	    <!-- This shows the status (sold out/on sale), price, and description (excerpt) text -->
+	    <div class="col-sm-4">
+		    <div id="productDetails">
+		      <!-- {@|product-status} -->
+
+		      <h1 class="product-title">{title}</h1>
+
+		      {@|product-price}
+
+  			  <!-- <p>Quantity:</p> -->
+
+		      {@|product-checkout}
+		    </div>
+		</div>
+	</div>
+
+
+    <!-- This displays any text/blocks added to the Additional Info tab -->
+    <div>
+    	<h1 id="aboutProduct">
+    	About {title}
+    	</h1>
+    </div>
+
+    {.section body}
+    <div class="product-description">
+      {@}
+    </div>
+  </div>
+
+{.end}
+
+
+
+
+
+
+<!-- Initialize Swiper -->
+    <script>
+
+    var galleryTop = new Swiper('.gallery-top', {
+        nextButton: '.swiper-button-next',
+        prevButton: '.swiper-button-prev',
+        spaceBetween: 10,
+    });
+    var galleryThumbs = new Swiper('.gallery-thumbs', {
+        spaceBetween: 10,
+        centeredSlides: true,
+        slidesPerView: 'auto',
+        touchRatio: 0.2,
+        slideToClickedSlide: true
+    });
+    galleryTop.params.control = galleryThumbs;
+    galleryThumbs.params.control = galleryTop;
+
+    // var swiper = new Swiper('.swiper-container', {
+    //     pagination: '.swiper-pagination',
+    //     paginationClickable: true
+    // });
+
+    </script>
+
+
+<!-- Display currency and shipping -->
+<div class="currency">
+  <p>Prices displayed in USD$ <a class="shipping" target="_blank" href="https://william-li-zrps.squarespace.com/shipping">Shipping & Returns</a> </p>
+  <a class="shipping-mobile" target="_blank" href="https://william-li-zrps.squarespace.com/shipping">Shipping & Returns</a>
+</div>
+
