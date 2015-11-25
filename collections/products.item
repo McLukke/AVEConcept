@@ -3,7 +3,7 @@
     
     <div>
 		<h1>
-			<a id="backtoshop" class="back-link" href="https://william-li-zrps.squarespace.com/products"><img class="back-arrow" src="/assets/back-arrow.png" /> Back to shop </a>
+			<a id="backtoshop" class="back-link" href="https://www.aveconcept.com/products"><img class="back-arrow" src="/assets/back-arrow.png" /> Back to shop </a>
 		</h1>
 	</div>
 
@@ -211,7 +211,7 @@
 
 <!-- Display currency and shipping -->
 <div class="currency">
-  <p>Prices displayed in USD$ <a class="shipping" target="_blank" href="https://william-li-zrps.squarespace.com/shipping">Shipping & Returns</a> </p>
-  <a class="shipping-mobile" target="_blank" href="https://william-li-zrps.squarespace.com/shipping">Shipping & Returns</a>
+  <p>Prices displayed in USD$ <a class="shipping" target="_blank" href="http://www.aveconcept.com/shipping">Shipping & Returns</a> </p>
+  <a class="shipping-mobile" target="_blank" href="http://www.aveconcept.com/shipping">Shipping & Returns</a>
 </div>
 

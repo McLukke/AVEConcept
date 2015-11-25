@@ -79,8 +79,8 @@
 <!-- Display currency and shipping -->
 
 <div class="currencylist">
-  <p>Prices displayed in USD$ <a class="shipping" target="_blank" href="https://william-li-zrps.squarespace.com/shipping">Shipping & Returns</a> </p>
-  <a class="shipping-mobile" target="_blank" href="https://william-li-zrps.squarespace.com/shipping">Shipping & Returns</a>
+  <p>Prices displayed in USD$ <a class="shipping" target="_blank" href="http://www.aveconcept.com/shipping">Shipping & Returns</a> </p>
+  <a class="shipping-mobile" target="_blank" href="http://www.aveconcept.com/shipping">Shipping & Returns</a>
 </div>
 
 
