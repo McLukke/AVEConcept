@@ -841,9 +841,8 @@
           </div>
         </div>
       </div>
-    </div>
 
-  <!-- Specs -->
+        <!-- Specs -->
     <div id="specifications">
       <div class="row">
         <div class="hidden-xs hidden-sm col-md-1 col-lg-2"></div>
@@ -988,6 +987,9 @@
         <p class="col-xs-12 hidden-sm hidden-md hidden-lg text-left">AVE warrants this product for 3 years from the date of purchase against defects and / or faulty workmanship.</p>
       </div>
     </div>
+    </div>
+
+
 
 </div>
 </div>
