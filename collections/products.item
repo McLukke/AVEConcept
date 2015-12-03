@@ -3,7 +3,7 @@
     
     <div>
 		<h1>
-			<a id="backtoshop" class="back-link" href="https://www.aveconcept.com/products"><img class="back-arrow" src="/assets/back-arrow.png" /> Back to shop </a>
+			<a id="backtoshop" class="back-link" href="/products"><img class="back-arrow" src="/assets/back-arrow.png" /> Back to shop </a>
 		</h1>
 	</div>
 
