@@ -202,13 +202,13 @@
         paginationClickable: true
     });
 
-    jQuery('.desktop-preview-small .product_item.img-responsive').click(function(){
+    jQuery('.desktop-preview-small .desktop-slider-thumbnails-holder').click(function(){
    		jQuery('.active').removeClass('active');
    		jQuery(this).toggleClass('active');
 	});
 	
-    jQuery('.desktop-preview-small .product_item.img-responsive:eq(0)').addClass('active');
-	jQuery('input[type="radio"]:eq(0)').attr('checked', 'checked');
+    jQuery('.desktop-preview-small .desktop-slider-thumbnails-holder:eq(0)').addClass('active');
+	   jQuery('input[type="radio"]:eq(0)').attr('checked', 'checked');
 
     </script>
 
