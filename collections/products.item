@@ -99,9 +99,9 @@
 					{.image?}
 						<input type="radio" name="radio-btn" class="img-slide-desktop" id="{urlId}" />
 					    	<div class="slide-container-desktop col-xs-12">
-							<div class="slide-desktop">
-						          <img  class="product_item img-responsive" {@|image-meta} />
-						    </div>
+							<div class="slide-desktop" style="background-img: url({assetUrl}?format=300w);background-repeat:no-repeat; background-position: center center;">
+						    
+						  </div>
 					    </div>
 				    {.end}
 			    {.end}
