@@ -93,19 +93,20 @@
 
 		<div class="shop-viewer">
 
-			<ul class="slides-desktop">
+			<div class="slides-desktop row">
 
 				{.repeated section items}
 					{.image?}
 						<input type="radio" name="radio-btn" class="img-slide-desktop" id="{urlId}" />
-					    	<li class="slide-container-desktop">
-							<div class="slide-desktop col-xs-12">
+					    	<div class="slide-container-desktop col-xs-12">
+							<div class="slide-desktop">
 						          <img  class="product_item img-responsive" {@|image-meta} />
 						    </div>
-					    </li>
+					    </div>
 				    {.end}
 			    {.end}
 
+          <!--
 			    <li class="nav-dots-desktop">
 			    	{.repeated section items}
 			    		{.image?}
@@ -113,7 +114,8 @@
 			    		{.end}
 			    	{.end}
 			    </li>
-			</ul>
+          -->
+			</div>
 		</div>
 
 <!-- end of desktop slider -->
