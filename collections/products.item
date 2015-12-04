@@ -99,7 +99,7 @@
 					{.image?}
 						<input type="radio" name="radio-btn" class="img-slide-desktop" id="{urlId}" />
 					    	<div class="slide-container-desktop col-xs-12">
-							<div class="slide-desktop" style="background-image: url({assetUrl}?format=1000w);background-repeat:no-repeat; background-position: center center; background-size: cover;">
+							<div class="slide-desktop" style="background-image: url({assetUrl}?format=1000w);background-repeat:no-repeat; background-position: center center; background-size: contain;">
 						    
 						  </div>
 					    </div>
