@@ -121,7 +121,7 @@
 
 <!-- After testing -->
 
-
+        <div id="desktop-slider-thumbnails-container">
 	      {.repeated section items}
 	        {.image?}
 	        	<div class="desktop-preview-small col-xs-3">
@@ -133,6 +133,7 @@
 	          	</div>
 	        {.end}
 	      {.end}
+        </div>
 
 
 
