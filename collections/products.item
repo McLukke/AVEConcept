@@ -128,8 +128,9 @@
 	        {.image?}
 	        	<div class="desktop-preview-small col-xs-3">
 		        	<label for="{urlId}">
-				    	<div>
-	          				<img class="product_item img-responsive" {@|image-meta} />
+				    	    <div style="background-image: url({assetUrl}?format=300w);background-repeat:no-repeat; background-position: center center; background-size: cover;">
+	          				<!-- <img class="product_item img-responsive" {@|image-meta} /> -->
+
 	          			</div>
 	          		</label>
 	          	</div>
