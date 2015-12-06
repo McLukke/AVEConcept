@@ -951,8 +951,8 @@
                 </div>
                 <div class="description hidden">
                   <img class="specs_anchor insertable sm_spec_img blue_length blue_spec_img hidden" src="/assets/specs/blue_length.png"/>
-                  <img class="specs_anchor insertable white_spec_img sm_spec_img" src="/assets/specs/length.png" /><p class="content long_text">Insertable Length:
-                     82mm / 3.2 inches</p>
+                  <img class="specs_anchor insertable white_spec_img sm_spec_img" src="/assets/specs/length.png" /><p class="content long_text">Length:
+                     82mm / 3.2 inches<br/>Weight: 3.5g</p>
                 </div>
                 <div class="description hidden">
                   <img class="specs_anchor sm_spec_img blue_spec_img hidden" src="/assets/specs/blue_vibration.png"/>
