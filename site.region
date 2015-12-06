@@ -20,7 +20,7 @@
       }
 
       function closeLightbox () {
-        $('.lightbox-outer').fadeOut();
+        $('.lightbox-outer').hide();
         $('#lightboxPlayer').attr('src', '');
       }
 
@@ -40,7 +40,7 @@
     <div class="lightbox-outer" id="lightbox-trigger">
       <!-- lightbox container hidden with CSS -->
       <div class="lightbox">
-          <iframe id="lightboxPlayer" src='' width="100%" height="100%" frameborder='0' autoplay="1" webkitAllowFullScreen mozallowfullscreen allowFullScreen></iframe>
+          <iframe id="lightboxPlayer" src='' width="100%" height="100%" frameborder='0' webkitAllowFullScreen mozallowfullscreen allowFullScreen></iframe>
       </div>
     </div>
   
