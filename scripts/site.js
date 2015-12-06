@@ -116,7 +116,7 @@ Y.use('node', 'squarespace-ui-base', function() {
       } );
 
       $('#homepageVideo').click(function () {
-        $('#lightboxPlayer').attr('src', $('#homepageVideo').data('video'));
+        $('#lightboxPlayer').attr('src', $('#homepageVideo').data('video')+"?autoplay=1");
         openLightbox();
       } );
 
@@ -201,14 +201,14 @@ Y.use('node', 'squarespace-ui-base', function() {
       }
 
 
-      $('#lightbox-trigger').click(function () {
-        closeLightbox();
-      } );
+      // $('#lightbox-trigger').click(function () {
+      //   closeLightbox();
+      // } );
 
-      $('#homepageVideo').click(function () {
-        $('#lightboxPlayer').attr('src', $('#homepageVideo').data('video'));
-        openLightbox();
-      } );
+      // $('#homepageVideo').click(function () {
+      //   $('#lightboxPlayer').attr('src', $('#homepageVideo').data('video'));
+      //   openLightbox();
+      // } );
 
 
 
