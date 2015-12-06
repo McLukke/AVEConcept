@@ -21,6 +21,7 @@
 
       function closeLightbox () {
         $('.lightbox-outer').fadeOut();
+        $('#lightboxPlayer').attr('src', '');
       }
 
 
