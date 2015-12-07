@@ -769,7 +769,7 @@
     <div id="description_trigger"></div>
     <div id="productDescription" class="container-fluid">
       <!-- About -->
-        <div id="about_product1" class="about_product hidden-xs">
+        <div id="about_product1" class="about_product">
           <div class="row">
             <div class="hidden-sm col-md-1 col-lg-2"></div>
             <div class="col-sm-12 col-md-10 col-lg-8 descript_title title">About Alto:</div>
@@ -781,7 +781,7 @@
             </div>
           </div>
         </div>
-        <div id="about_product2" class="about_product hidden hidden-xs">
+        <div id="about_product2" class="about_product hidden">
           <div class="row">
             <div class="hidden-sm col-md-1 col-lg-2"></div>
             <div class="col-sm-12 col-md-10 col-lg-8 descript_title title">About Alto-L:</div>
@@ -793,7 +793,7 @@
             </div>
           </div>
         </div>
-        <div id="about_product3" class="about_product hidden hidden-xs">
+        <div id="about_product3" class="about_product hidden">
           <div class="row">
             <div class="hidden-sm col-md-1 col-lg-2"></div>
             <div class="col-sm-12 col-md-10 col-lg-8 descript_title title">About Cirrus:</div>
@@ -805,7 +805,7 @@
             </div>
           </div>
         </div>
-        <div id="about_product4" class="about_product hidden hidden-xs">
+        <div id="about_product4" class="about_product hidden">
           <div class="row">
             <div class="hidden-sm col-md-1 col-lg-2"></div>
             <div class="col-sm-12 col-md-10 col-lg-8 descript_title title">About Cirrus-L:</div>
@@ -817,7 +817,7 @@
             </div>
           </div>
         </div>
-        <div id="about_product5" class="about_product hidden hidden-xs">
+        <div id="about_product5" class="about_product hidden">
           <div class="row">
             <div class="hidden-sm col-md-1 col-lg-2"></div>
             <div class="col-sm-12 col-md-10 col-lg-8 descript_title title">About Nimbus:</div>
@@ -829,7 +829,7 @@
             </div>
           </div>
         </div>
-        <div id="about_product6" class="about_product hidden hidden-xs">
+        <div id="about_product6" class="about_product hidden">
           <div class="row">
             <div class="hidden-sm col-md-1 col-lg-2"></div>
             <div class="col-sm-12 col-md-10 col-lg-8 descript_title title">About Stratos:</div>
