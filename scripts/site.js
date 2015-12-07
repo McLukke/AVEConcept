@@ -106,9 +106,9 @@ Y.use('node', 'squarespace-ui-base', function() {
         jQuery('#big-block').addClass('main-image-small').removeClass('main-image-big');
       }
 
-       if (document.location.pathname.indexOf("new-home") > -1) {
-          $('body').addClass('new-home2015');
-       }
+      if (document.location.pathname === "/" {
+        $('body').addClass('new-home2015');
+      }
 
 
       $('#lightbox-trigger').click(function () {
