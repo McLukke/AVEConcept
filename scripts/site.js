@@ -106,7 +106,7 @@ Y.use('node', 'squarespace-ui-base', function() {
         jQuery('#big-block').addClass('main-image-small').removeClass('main-image-big');
       }
 
-      if (document.location.pathname === "/" {
+      if (document.location.pathname === "/") {
         $('body').addClass('new-home2015');
       }
 
